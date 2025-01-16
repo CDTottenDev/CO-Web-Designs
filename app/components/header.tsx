@@ -1,7 +1,10 @@
+
 import Link from 'next/link'
 import { ThemeSwitch } from './ui/themeswitch'
 
 export function Header() {
+  
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -18,7 +21,7 @@ export function Header() {
               ['About', '/about'],
               ['Services', '/services'],
               ['Blog', '/blog'],
-              ['Testimonials', '/testimonials'],
+              ['Prices', '/prices'],
               ['Contact', '/contact'],
             ].map(([title, url]) => (
               <Link 

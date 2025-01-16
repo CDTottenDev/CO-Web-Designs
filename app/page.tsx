@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { prisma } from '@/lib/prisma'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -18,38 +19,67 @@ export default async function Home() {
   const posts = await getPosts()
 
   return (
-    <div className="container py-8">
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-            Next.js SEO Boilerplate
-          </h1>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            A high-performance, SEO-optimized Next.js starter template with TypeScript, 
-            Tailwind CSS, and Prisma. Ready for production.
-          </p>
+    <div className="h-screen w-full relative">
+      {/* Left Column */}
+      <div className="absolute left-0 w-1/2 h-full">
+        <div className="absolute top-0 left-0 w-full h-[calc(50vh-15vh)]
+         bg-[#DDA15E] flex flex-col items-center justify-center">
+          <img 
+            src="/assets/icon-about-us-black.svg"
+            alt="About Us Icon"
+            className="w-28 h-28"
+          />
+          <span className="text-sm p-2">About</span>
         </div>
-      </section>
 
-      <section className="container py-8 md:py-12 lg:py-24">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Latest Posts
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <article key={post.id} className="group relative flex flex-col space-y-2">
-                <h3 className="text-2xl font-medium leading-none">
-                  {post.title}
-                </h3>
-                {post.excerpt && (
-                  <p className="text-muted-foreground">{post.excerpt}</p>
-                )}
-              </article>
-            ))}
-          </div>
+        <div className="absolute top-[calc(50vh-15vh)] left-0 w-full h-[calc(25vh)]
+         bg-[#EFE9C5] flex flex-col items-center justify-center">
+          <img 
+            src="/assets/icon-contact-black.svg"
+            alt="Contact Me Icon"
+            className="w-28 h-28"
+          />
+          <span className="text-sm p-2">Contact Us</span>
         </div>
-      </section>
+
+        <div className="absolute top-[calc(50vh+10vh)] left-0 w-full bottom-0
+         bg-[#606C38]/[0.77]  flex flex-col items-center justify-center">
+          <img 
+            src="/assets/icon-price-black.svg"
+            alt="Price Icon"
+            className="w-28 h-28"
+          />
+          <span className="text-sm p-2">Price's</span>
+        </div>
+      </div>
+
+      {/* Right Column */}
+      <div className="absolute right-0 w-1/2 h-full">
+        <div className="absolute top-0 right-0 w-full h-[50vh] bg-[#BC6C25]/[0.89]
+         flex flex-col items-center justify-center">
+          <img 
+            src="/assets/icon-services-black.svg"
+            alt="Services Icon"
+            className="w-48 h-48"
+          />
+          <span className="text-sm p-2">Service's</span>
+        </div>
+
+        <div className="absolute top-[50vh] right-0 w-full h-[calc((50vh/3)*2)]
+         bg-[#283618]/[0.69] flex flex-col items-center justify-center">
+          <img 
+            src="/assets/icon-blog-black.svg"
+            alt="Blog Icon"
+            className="w-24 h-24"
+          />
+          <span className="text-sm p-2">Blog</span>
+        </div>
+
+        <div className="absolute bottom-0 right-0 w-full h-[calc(50vh/3)]
+        bg-[#C3CA93]/[0.90] flex flex-col items-center justify-center">
+          <span className="text-sm p-2">Misc.</span>
+        </div>
+      </div>
     </div>
   )
 }

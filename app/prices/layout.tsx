@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Testimonials | Your Site Name',
-  description: 'What our clients say about us',
+  title: 'Prices | Your Site Name',
+  description: 'Prices will be displayed here',
 }
 
-export default function TestimonialsLayout({
+export default function PricesLayout({
   children,
 }: {
   children: React.ReactNode
