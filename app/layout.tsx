@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from 'next-themes'
+import './styles/flip.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
