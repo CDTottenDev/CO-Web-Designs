@@ -2,9 +2,9 @@ import '@/app/globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing Plans - Your Company Name',
-  description: 'Compare our fixed cost plans, guarantees, and monthly pricing options to find the perfect solution for your needs.',
-  keywords: 'pricing plans, fixed cost, monthly subscription, service guarantees',
+  title: 'Central Oregon Web Designs - Pricing & Features',
+  description: 'Explore our flexible pricing plans and customizable features for your web design project.',
+  keywords: 'web design, pricing plans, custom features, Central Oregon',
 }
 
 export default function PriceBreakdownLayout({
@@ -13,9 +13,9 @@ export default function PriceBreakdownLayout({
   children: React.ReactNode
 }) {
   return (
-    <section>
-      {children}
-    </section>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-teal-50 to-green-50">
+      <main>{children}</main>
+    </div>
   )
 }
 

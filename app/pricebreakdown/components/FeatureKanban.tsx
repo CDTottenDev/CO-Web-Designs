@@ -85,8 +85,8 @@ export function FeatureKanban() {
   }, [features])
 
   return (
-    <div className="bg-gray-100">
-      <div className="mb-6 flex flex-col sm:flex-row justify-between items-center">
+    <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+      <div className="mb-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <FilterDropdown filterComplexity={filterComplexity} setFilterComplexity={setFilterComplexity} />
       </div>
@@ -94,16 +94,16 @@ export function FeatureKanban() {
       <TotalPrice totalPrice={totalPrice} />
       
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {complexityOrder.map((complexity) => (
             <Droppable key={complexity} droppableId={complexity}>
               {(provided) => (
                 <div
                   {...provided.droppableProps}
                   ref={provided.innerRef}
-                  className="bg-white rounded-lg shadow p-4"
+                  className="bg-white rounded-lg shadow-md p-4"
                 >
-                  <h3 className="text-xl font-semibold mb-4">{complexity}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-800">{complexity}</h3>
                   {filteredFeatures
                     .filter(feature => feature.complexity === complexity)
                     .map((feature, index) => (
@@ -113,15 +113,15 @@ export function FeatureKanban() {
                             ref={provided.innerRef}
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
-                            className="bg-gray-100 p-4 mb-2 rounded relative"
+                            className="bg-gray-50 p-4 mb-3 rounded-lg shadow-sm relative hover:shadow-md transition duration-300"
                           >
-                            <h4 className="font-medium">{feature.name}</h4>
-                            <p className="text-sm text-gray-600">
+                            <h4 className="font-medium text-gray-800">{feature.name}</h4>
+                            <p className="text-sm text-gray-600 mt-1">
                               ${feature.priceRange.min} - ${feature.priceRange.max}
                             </p>
                             <button
                               onClick={() => deleteFeature(feature.id)}
-                              className="absolute top-2 right-2 text-red-500 hover:text-red-700"
+                              className="absolute top-2 right-2 text-red-500 hover:text-red-700 transition duration-300"
                               aria-label={`Delete ${feature.name}`}
                             >
                               <TrashIcon className="h-5 w-5" />

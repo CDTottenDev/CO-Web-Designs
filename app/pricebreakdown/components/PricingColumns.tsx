@@ -1,82 +1,73 @@
 'use client'
 
 import React from 'react'
+import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 interface PricingProps {
   plans: {
-    fixedCost: string;
-    guarantees: string[];
-    monthlyPrice: string;
+    name: string;
+    description: string;
+    price: string;
+    features: {
+      category: string;
+      items: string[];
+    }[];
   }[];
 }
 
-const PricingColumns = ({ plans = [{
-  fixedCost: "Basic Plan",
-  guarantees: ["24/7 Support", "Basic Features", "Email Support"],
-  monthlyPrice: "$29/month"
-}] }) => {
+const PricingColumns = ({ plans }: PricingProps) => {
+  const [expandedSections, setExpandedSections] = React.useState<{[key: string]: boolean}>({})
+
+  const toggleSection = (planName: string, category: string) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [`${planName}-${category}`]: !prev[`${planName}-${category}`]
+    }))
+  }
+
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8">
-      <section className="grid md:grid-cols-3 gap-8" aria-label="pricing plans">
-        {/* Fixed Cost Column */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
-            Fixed Cost Plan
-          </h2>
-          <div className="space-y-4">
-            <p className="text-lg text-gray-600">
-              {plans[0].fixedCost}
-            </p>
+    <div className="space-y-8">
+      {plans.map((plan, planIndex) => (
+        <div key={planIndex} className="bg-white rounded-lg shadow-xl overflow-hidden">
+          <div className="p-6 bg-gradient-to-r from-blue-500 to-teal-400">
+            <h2 className="text-3xl font-bold text-white mb-2">{plan.name}</h2>
+            <p className="text-xl text-white mb-4">{plan.price}</p>
+            <p className="text-white opacity-90">{plan.description}</p>
           </div>
-        </div>
-
-        {/* What's Guaranteed Column */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
-            What's Guaranteed
-          </h2>
-          <ul className="space-y-4">
-            {plans[0].guarantees.map((guarantee, index) => (
-              <li 
-                key={index}
-                className="flex items-center text-gray-600"
-              >
-                <svg
-                  className="w-5 h-5 text-green-500 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          <div className="p-6">
+            {plan.features.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="mb-6 last:mb-0">
+                <button
+                  onClick={() => toggleSection(plan.name, category.category)}
+                  className="flex justify-between items-center w-full text-left"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
+                  <h3 className="text-xl font-semibold text-gray-800">{category.category}</h3>
+                  <ChevronDownIcon
+                    className={`w-5 h-5 text-gray-500 transform transition-transform ${
+                      expandedSections[`${plan.name}-${category.category}`] ? 'rotate-180' : ''
+                    }`}
                   />
-                </svg>
-                {guarantee}
-              </li>
+                </button>
+                {expandedSections[`${plan.name}-${category.category}`] && (
+                  <ul className="mt-4 space-y-2">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start">
+                        <svg className="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
-          </ul>
-        </div>
-
-        {/* Monthly Column */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">
-            Monthly
-          </h2>
-          <div className="space-y-4">
-            <p className="text-3xl font-bold text-gray-800">
-              {plans[0].monthlyPrice}
-            </p>
-            <p className="text-gray-600">
-              Billed monthly
-            </p>
           </div>
         </div>
-      </section>
+      ))}
     </div>
   )
 }
 
 export default PricingColumns
+

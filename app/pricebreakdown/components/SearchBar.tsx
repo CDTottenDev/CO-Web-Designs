@@ -7,7 +7,7 @@ interface SearchBarProps {
 
 export function SearchBar({ searchTerm, setSearchTerm }: SearchBarProps) {
   return (
-    <div className="w-full sm:w-64 mb-4 sm:mb-0">
+    <div className="w-full sm:w-64">
       <label htmlFor="search-features" className="sr-only">Search features</label>
       <input
         id="search-features"
@@ -15,7 +15,7 @@ export function SearchBar({ searchTerm, setSearchTerm }: SearchBarProps) {
         placeholder="Search features..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
       />
     </div>
   )

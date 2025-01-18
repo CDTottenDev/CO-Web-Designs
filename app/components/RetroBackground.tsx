@@ -6,7 +6,8 @@ interface RetroBackgroundProps {
 
 const RetroBackground: React.FC<RetroBackgroundProps> = ({ children }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#F5E6C3]">
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#ebf3d8] to-[#919c77]" />
       <div 
         className="absolute inset-0 opacity-20"
         style={{

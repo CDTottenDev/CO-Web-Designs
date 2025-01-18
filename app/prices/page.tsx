@@ -5,10 +5,14 @@ export default function PricingPage() {
     <div className="max-w-7xl mx-auto relative">
       <div className="text-center mb-16">
         <h1 className="text-5xl font-bold text-emerald-50 mb-6 tracking-tight">
-          Choose Your Perfect Plan
+          Pricing
         </h1>
         <p className="text-xl text-emerald-100">
-          Transforming your vision into reality with our flexible solutions
+          Flexible Pricing Arrangements
+          <br />
+          Making sure your business
+          <br />
+          is moving forward
         </p>
       </div>
       <PricingCards />

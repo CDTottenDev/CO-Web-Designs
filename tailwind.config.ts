@@ -43,6 +43,10 @@ module.exports = {
           foreground: "hsl(var(--accent-foreground))",
         },
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -66,8 +70,8 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out", 
         "shadow": "shadow 5s ease-in-out 2",
+        'spin-slow': 'spin 12s linear infinite',
       },
-      
     },
   },
   plugins: [require("tailwindcss-animate")],
