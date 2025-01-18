@@ -11,7 +11,7 @@ export default function Home() {
             {/* Front Content */}
             <div className="front">
               <Link href="/about" className="absolute top-0 left-0 w-full h-[calc(50vh-15vh)]
-               bg-[#DDA15E] flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
+               bg-[#eeb476] flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
                 <img src="/assets/icon-about-us-black.svg" alt="About Us Icon" className="w-28 h-28" />
                 <span className="text-sm p-2">About</span>
               </Link>
@@ -23,7 +23,7 @@ export default function Home() {
               </Link>
 
               <Link href="/prices" className="absolute top-[calc(50vh+10vh)] left-0 w-full bottom-0
-               bg-[#606C38]/[0.77] flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
+               bg-[#93a164] flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
                 <img src="/assets/icon-price-black.svg" alt="Price Icon" className="w-28 h-28" />
                 <span className="text-sm p-2">Price's</span>
               </Link>
@@ -66,14 +66,14 @@ export default function Home() {
           <div className="flipper">
             {/* Front Content */}
             <div className="front">
-              <Link href="/services" className="absolute top-0 right-0 w-full h-[50vh] bg-[#BC6C25]/[0.89]
+              <Link href="/services" className="absolute top-0 right-0 w-full h-[50vh] bg-[#d88b48]
                flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
                 <img src="/assets/icon-services-black.svg" alt="Services Icon" className="w-48 h-48" />
                 <span className="text-sm p-2">Service's</span>
               </Link>
 
               <Link href="/blog" className="absolute top-[50vh] right-0 w-full h-[calc((50vh/3)*2)]
-               bg-[#283618]/[0.69] flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
+               bg-[#808d6f] flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
                 <img src="/assets/icon-blog-black.svg" alt="Blog Icon" className="w-24 h-24" />
                 <span className="text-sm p-2">Blog</span>
               </Link>

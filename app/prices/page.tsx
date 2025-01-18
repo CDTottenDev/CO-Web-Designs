@@ -1,11 +1,18 @@
-'use client'
+import { PricingCards } from '@/app/prices/components/pricing-cards'
 
-import { Pricing } from './components/Pricing'
-
-export default function PricesPage() {
+export default function PricingPage() {
   return (
-    <main className="bg-gradient-to-b from-gray-100 to-gray-200 min-h-screen">
-      <Pricing />
-    </main>
+    <div className="max-w-7xl mx-auto relative">
+      <div className="text-center mb-16">
+        <h1 className="text-5xl font-bold text-emerald-50 mb-6 tracking-tight">
+          Choose Your Perfect Plan
+        </h1>
+        <p className="text-xl text-emerald-100">
+          Transforming your vision into reality with our flexible solutions
+        </p>
+      </div>
+      <PricingCards />
+    </div>
   )
 }
+
