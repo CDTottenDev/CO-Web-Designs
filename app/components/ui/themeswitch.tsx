@@ -20,7 +20,7 @@ export function ThemeSwitch() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="rounded-xl p-2 bg-white/80 dark:bg-gray-900/80 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400"
+      className="animate-shadow rounded-xl p-2 bg-white/80 dark:bg-gray-900/80 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (

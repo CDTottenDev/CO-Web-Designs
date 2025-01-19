@@ -63,9 +63,9 @@ export default function Home() {
       {/* Right Column */}
       <div className="absolute right-0 w-1/2 h-full perspective-1000">
         <div className="flip-container">
-          <div className="flipper">
+          <div className="flipper ">
             {/* Front Content */}
-            <div className="front">
+            <div className="front ">
               <Link href="/services" className="absolute top-0 right-0 w-full h-[50vh] bg-[#d88b48]
                flex flex-col items-center justify-center hover:opacity-90 transition-opacity">
                 <img src="/assets/icon-services-black.svg" alt="Services Icon" className="w-48 h-48" />

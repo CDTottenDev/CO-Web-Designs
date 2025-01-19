@@ -16,7 +16,7 @@ export default function FlipSection() {
   return (
     <button 
       onClick={handleFlip}
-      className="absolute bottom-0 right-0 w-full h-[calc(50vh/3)]
+      className="absolute bottom-0 right-0 w-full h-[calc(50vh/3)] rounded-lg 
       bg-[#C3CA93]/[0.90] flex flex-col items-center justify-center
       hover:opacity-90 transition-opacity cursor-pointer"
     >

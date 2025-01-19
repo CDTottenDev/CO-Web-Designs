@@ -23,9 +23,9 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 201 96% 32%;
-    --foreground-rgb: 51, 51, 51;
-    --background-start-rgb: 240, 253, 250;
-    --background-end-rgb: 236, 253, 245;
+    --foreground-rgb: 120, 53, 15;
+    --background-start-rgb: 255, 251, 235;
+    --background-end-rgb: 255, 237, 213;
   }
 
   .dark {
@@ -67,7 +67,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold mb-2;
+    @apply font-bold mb-2 text-orange-700;
   }
 
   h1 {
@@ -81,6 +81,7 @@
   p {
     @apply mb-4;
   }
+
 }
 
 @layer components {
@@ -160,5 +161,10 @@
 
   .animate-float-random-3 {
     animation: float-random-3 20s ease-in-out infinite;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px rgb(var(--foreground-rgb));
+    text-stroke: 1px rgb(var(--foreground-rgb));
   }
 }
