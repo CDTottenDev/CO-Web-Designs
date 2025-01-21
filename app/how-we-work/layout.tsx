@@ -60,43 +60,34 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default function HowWeWorkLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </head>
-      <body>
-        <JsonLd<Organization>
-          item={{
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Central Oregon Web Designs",
-            url: "https://www.centralorgeonwebdesigns.com",
-            logo: "https://www.centralorgeonwebdesigns.com/logo.png",
-            sameAs: [
-              "https://www.facebook.com/CentralOregonWebDesigns",
-              "https://twitter.com/CentralORWebDesigns",
-              "https://www.linkedin.com/company/central-oregon-web-designs",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+1-541-555-1234",
-              contactType: "customer service",
-            },
-          }}
-        />
-        <header>{/* Add your header component here */}</header>
-        <main>{children}</main>
-        <footer>{/* Add your footer component here */}</footer>
-      </body>
-    </html>
+    <section className={inter.className}>
+      <JsonLd<Organization>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Central Oregon Web Designs",
+          url: "https://www.centralorgeonwebdesigns.com",
+          logo: "https://www.centralorgeonwebdesigns.com/logo.png",
+          sameAs: [
+            "https://www.facebook.com/CentralOregonWebDesigns",
+            "https://twitter.com/CentralORWebDesigns",
+            "https://www.linkedin.com/company/central-oregon-web-designs",
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+1-541-555-1234",
+            contactType: "customer service",
+          },
+        }}
+      />
+      {children}
+    </section>
   )
 }
 

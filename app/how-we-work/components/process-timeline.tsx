@@ -85,7 +85,21 @@ export default function ProcessTimeline() {
               description={step.description}
               index={index}
             >
-              <div className="flex items-center">
+              <div className={`mb-6 p-4 rounded-lg border  ${step.borderColor} ${step.color}`}>
+                <h4 className="flex justify-center items-center">
+                  <span className="text-sm text-gray-700">{step.title}</span>
+                </h4>
+                <ul className="flex flex-col sm:flex-row gap-2 items-center">
+                  {step.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center">
+                      <div className={` rounded-full ${step.iconColor}`} aria-hidden="true" />
+                      <span className="text-sm text-gray-700">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex items-center mb-6">
                 <div 
                   className={`w-12 h-12 rounded-full ${step.color} flex items-center justify-center relative z-10 mx-auto`}
                   aria-hidden="true"
@@ -94,17 +108,6 @@ export default function ProcessTimeline() {
                 </div>
               </div>
               
-              <div className={`mt-4 p-4 rounded-lg border ${step.borderColor} ${step.color}`}>
-                <h4 className="sr-only">Details</h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center">
-                      <div className={`w-2 h-2 rounded-full ${step.iconColor} mr-2`} aria-hidden="true" />
-                      <span className="text-sm text-gray-700">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </CollapsibleSection>
           </li>
         ))}

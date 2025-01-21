@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import ProcessTimeline from './components/process-timeline'
 import { JsonLd } from 'react-schemaorg'
 import { HowTo } from 'schema-dts'
+import RetroBackground2 from '../components/RetroBackground2'
 
 export const metadata: Metadata = {
   title: 'Our Web Design Process | Central Oregon Web Designs',
@@ -66,9 +67,10 @@ export default function TimelinePage() {
           ]
         }}
       />
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-12">
+      <RetroBackground2>
+        <main className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <header className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
               Our Web Design Process
             </h1>
@@ -77,8 +79,9 @@ export default function TimelinePage() {
             </p>
           </header>
           <ProcessTimeline />
-        </div>
-      </main>
+          </div>
+        </main>
+      </RetroBackground2>
     </>
   )
 }
