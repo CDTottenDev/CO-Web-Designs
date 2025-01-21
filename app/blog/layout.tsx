@@ -1,8 +1,84 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
+
+import "@/app/globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Blog | Your Site Name',
-  description: 'Blog page description',
+  metadataBase: new URL("https://your-domain.com"),
+  title: {
+    default: "Web Design Blog | Expert Tips & Insights",
+    template: "%s | Web Design Blog",
+  },
+  description:
+    "Discover expert web design tips, trends, and insights to help you create stunning and effective websites. Updated weekly with fresh content.",
+  keywords: ["web design", "UI/UX", "development tips", "design trends", "web development"],
+  authors: [{ name: "Your Name" }],
+  creator: "Your Company Name",
+  publisher: "Your Company Name",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://your-domain.com",
+    siteName: "Web Design Blog",
+    title: "Web Design Blog | Expert Tips & Insights",
+    description:
+      "Discover expert web design tips, trends, and insights to help you create stunning and effective websites.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Web Design Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Design Blog | Expert Tips & Insights",
+    description:
+      "Discover expert web design tips, trends, and insights to help you create stunning and effective websites.",
+    creator: "@yourhandle",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+}
+
+// JSON-LD structured data for better SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Web Design Blog",
+  description: "Expert web design tips, trends, and insights",
+  url: "https://your-domain.com",
+  publisher: {
+    "@type": "Organization",
+    name: "Your Company Name",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://your-domain.com/logo.png",
+    },
+  },
 }
 
 export default function BlogLayout({
@@ -11,8 +87,11 @@ export default function BlogLayout({
   children: React.ReactNode
 }) {
   return (
-    <section>
-      {children}
-    </section>
+    <div className="flex min-h-screen flex-col">
+      <main className="flex-1">
+        {children}
+      </main>
+    </div>
   )
 }
+

@@ -81,19 +81,22 @@ export default function Home() {
 
             {/* Back Content */}
             <div className="back flex flex-col h-full">
-              <Link href="/seo" className="flex-[0_0_25vh] bg-[#c0c8c9] border-2 border-black
+              <Link href="/seo" className="flex-[0_0_25vh] bg-[#c0c8c9] 
+              border-2 border-black
               flex flex-col items-center justify-center">
                 <img src="/assets/icon-back-seo-black.svg" alt="SEO Icon" className="w-28 h-28" />
                 <span className="text-sm p-2">SEO</span>
               </Link>
 
-              <Link href="/web-design" className="flex-[0_0_25vh] bg-[#c0c8c9] border-l-2 border-r-2 border-black
+              <Link href="/web-design" className="flex-[0_0_25vh] bg-[#c0c8c9] 
+              border-l-2 border-r-2 border-black
               flex flex-col items-center justify-center">
                 <img src="/assets/icon-back-design-black.svg" alt="Web Design Icon" className="w-28 h-28" />
                 <span className="text-sm p-2">Web Design</span>
               </Link>
 
-              <Link href="/knowledge-hub" className="flex-[0_0_33.35vh] bg-[#a6bcb4] border-l-2 border-t-2 border-r-2 border-black
+              <Link href="/knowledge-hub" className="flex-[0_0_33.35vh] bg-[#a6bcb4] 
+              border-l-2 border-t-2 border-r-2 border-black
               flex flex-col items-center justify-center">
                 <img src="/assets/icon-back-knowledge-black.svg" alt="Knowledge Hub Icon" className="w-28 h-28" />
                 <span className="text-sm p-2">Knowledge Hub</span>

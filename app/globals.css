@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -26,6 +26,11 @@
     --foreground-rgb: 120, 53, 15;
     --background-start-rgb: 255, 251, 235;
     --background-end-rgb: 255, 237, 213;
+    --pastel-blue: #a7c7e7;
+    --pastel-green: #c1e1c1;
+    --pastel-yellow: #ffefd5;
+    --pastel-pink: #ffd1dc;
+    --pastel-purple: #e6e6fa;
   }
 
   .dark {
@@ -55,8 +60,11 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-gray-800;
     font-feature-settings: "rlig" 1, "calt" 1;
     background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   }
@@ -92,9 +100,9 @@
   .retro-text-shadow {
     text-shadow: 2px 2px 0px rgba(88, 28, 135, 0.5);
   }
-} */
+}
 
-/* @layer utilities {
+@layer utilities {
   .animation-delay-2000 {
     animation-delay: 2s;
   }
@@ -167,4 +175,15 @@
     -webkit-text-stroke: 1px rgb(var(--foreground-rgb));
     text-stroke: 1px rgb(var(--foreground-rgb));
   }
-} */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+} 

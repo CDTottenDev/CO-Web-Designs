@@ -2,9 +2,9 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx,js,jsx,mdx}',
+    './components/**/*.{ts,tsx,js,jsx,mdx}',
+    './app/**/*.{ts,tsx,js,jsx,mdx}',
     './src/**/*.{ts,tsx}',
   ],
   theme: {
@@ -42,6 +42,13 @@ module.exports = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        pastel: {
+          blue: "#A7C7E7",
+          green: "#C1E1C1",
+          yellow: "#FFEFD5",
+          pink: "#FFD1DC",
+          purple: "#E6E6FA",
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -74,5 +81,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate")
+  ],
 }

@@ -20,12 +20,31 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Your Website Name",
+              // Add other schema properties as needed
+            })
+          }}
+        />
+      </head>
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavigationEvents />
           <Header />
           <main className="min-h-screen">
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:p-4"
+            >
+              Skip to main content
+            </a>
             {children}
           </main>
           <Analytics />

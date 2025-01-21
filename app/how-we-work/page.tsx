@@ -1,8 +1,85 @@
-export default function HowWeWorkPage() {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold">How We Work</h1>
-        <p className="mt-4">How we work will be listed here.</p>
-      </div>
-    )
-  }
+import { Metadata } from 'next'
+import ProcessTimeline from './components/process-timeline'
+import { JsonLd } from 'react-schemaorg'
+import { HowTo } from 'schema-dts'
+
+export const metadata: Metadata = {
+  title: 'Our Web Design Process | Central Oregon Web Designs',
+  description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
+  openGraph: {
+    title: 'Our Web Design Process | Central Oregon Web Designs',
+    description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
+    type: 'website',
+    url: 'https://centralorgeonwebdesigns.com/process',
+    images: [
+      {
+        url: 'https://centralorgeonwebdesigns.com/images/process-timeline.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Central Oregon Web Designs Process Timeline',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Web Design Process | Central Oregon Web Designs',
+    description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
+    images: ['https://centralorgeonwebdesigns.com/images/process-timeline.jpg'],
+  },
+}
+
+export default function TimelinePage() {
+  return (
+    <>
+      <JsonLd<HowTo>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "Web Design Process",
+          "description": "Our step-by-step web design process from initial consultation to launch and support.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Discovery & Planning",
+              "text": "We start with a detailed consultation to understand your goals, target audience, and project requirements."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Design Phase",
+              "text": "Our designers create a visual concept that aligns with your brand."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Development",
+              "text": "Our development team brings the design to life, ensuring a responsive, fast, and secure website."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Review & Testing",
+              "text": "Rigorous testing ensures everything works perfectly."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Launch & Support",
+              "text": "After a successful launch, we provide ongoing support and maintenance."
+            }
+          ]
+        }}
+      />
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <header className="text-center mb-12">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
+              Our Web Design Process
+            </h1>
+            <p className="text-xl text-gray-600">
+              A transparent journey from concept to launch
+            </p>
+          </header>
+          <ProcessTimeline />
+        </div>
+      </main>
+    </>
+  )
+}
+
