@@ -3,8 +3,12 @@ import ProcessTimeline from './components/process-timeline'
 import { JsonLd } from 'react-schemaorg'
 import { HowTo } from 'schema-dts'
 import RetroBackground2 from '../components/RetroBackground2'
+import { uniqueApproachMetadata } from '../how-we-work/components/UniqueApproachSection.metadata'
+import UniqueApproachSection from '../how-we-work/components/UniqueApproachSection'
+
 
 export const metadata: Metadata = {
+  ...uniqueApproachMetadata,
   title: 'Our Web Design Process | Central Oregon Web Designs',
   description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
   openGraph: {
@@ -79,6 +83,7 @@ export default function TimelinePage() {
             </p>
           </header>
           <ProcessTimeline />
+          <UniqueApproachSection />
           </div>
         </main>
       </RetroBackground2>
