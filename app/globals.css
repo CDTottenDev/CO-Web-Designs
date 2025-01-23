@@ -86,7 +86,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold mb-2 text-orange-700;
+    @apply font-bold mb-2 text-orange-700 font-retro;
   }
 
   h1 {
@@ -196,14 +196,5 @@
   .no-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 } 

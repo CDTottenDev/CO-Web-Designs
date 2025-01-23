@@ -1,8 +1,11 @@
-import type { Metadata } from 'next'
+import "@/app/globals.css"
+import { Inter } from "next/font/google"
 
-export const metadata: Metadata = {
-  title: 'Web Design | Your Site Name',
-  description: 'Web design',
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "Central Oregon Web Design",
+  description: "Professional web design services for local businesses in Central Oregon",
 }
 
 export default function WebDesignLayout({
@@ -11,8 +14,9 @@ export default function WebDesignLayout({
   children: React.ReactNode
 }) {
   return (
-    <section>
+    <section className={inter.className}>
       {children}
     </section>
   )
 }
+

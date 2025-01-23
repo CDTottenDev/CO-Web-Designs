@@ -1,8 +1,19 @@
+import Image from "next/image"
+import type { Metadata } from "next"
+import WebDesignContent from "./components/WebDesignContent"
+
+export const metadata: Metadata = {
+  title: "Web Design in 2025 | Central Oregon Web Design",
+  description:
+    "Discover why your local business needs a website in 2025. Central Oregon Web Design creates professional, user-friendly websites that attract and convert customers.",
+  keywords: "web design, Central Oregon, local business, SEO, 2025, website development",
+}
+
 export default function WebDesignPage() {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold">Web Design</h1>
-        <p className="mt-4">Web design will be listed here.</p>
-      </div>
-    )
-  }
+  return (
+    <div className="min-h-screen bg-pastel-yellow font-retro">
+      <WebDesignContent />
+    </div>
+  )
+}
+

@@ -47,7 +47,15 @@ module.exports = {
   				green: '#C1E1C1',
   				yellow: '#FFEFD5',
   				pink: '#FFD1DC',
-  				purple: '#E6E6FA'
+  				purple: '#E6E6FA',
+  				orange: '#FFD8B1',
+  				teal: '#A0E7E5',
+  				peach: '#FFCBA4',
+  			},
+  			retro: {
+  				purple: '#8A2BE2',
+  				blue: '#4169E1',
+  				green: '#32CD32',
   			},
   			card: {
   				DEFAULT: 'hsl(var(--card))',
@@ -105,7 +113,10 @@ module.exports = {
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			shadow: 'shadow 5s ease-in-out 2',
   			'spin-slow': 'spin 12s linear infinite'
-  		}
+  		},
+  		fontFamily: {
+  			retro: ["VT323", "monospace"],
+  		},
   	}
   },
   plugins: [
