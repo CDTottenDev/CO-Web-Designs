@@ -1,10 +1,61 @@
 import RetroBackground from '@/app/components/RetroBackground'
+import Image from 'next/image'
 
 export default function AboutPage() {
   return (
     <RetroBackground>
-      <div className="flex items-center justify-center min-h-screen">
-        
+      <div className="flex items-center justify-center min-h-screen py-16">
+        <div className="max-w-4xl px-6 space-y-12">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-amber-400 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+              Hey there! I'm Colt Totten
+            </h1>
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-green-500/20 blur-lg rounded-full" />
+              <p className="text-xl md:text-2xl text-white opacity-90 relative">
+                Founder, Designer, Developer & Blue-Collar Tech Enthusiast
+              </p>
+            </div>
+          </div>
+
+          {/* Bio Sections */}
+          <div className="grid gap-8 text-white">
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-amber-400/30">
+              <p className="text-lg leading-relaxed">
+                My story isn't one of coding boot camps or college dorm startups. I've spent the last 25 years in hard blue-collar work—concrete foreman, electrician, truck driver, manufacturing supervisor—while raising a family and quietly building a serious love for computers and creative design on the side.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-amber-400/30">
+              <p className="text-lg leading-relaxed">
+                It all started when I got my first computer at 20. After growing up on a ranch in Central Oregon and jumping headfirst into the working world, that computer opened up a whole new universe. I dove into coding, graphic design, 3D modeling, animation—you name it. While the workday might have involved steel-toed boots and heavy machinery, my evenings were spent teaching myself everything from Blender to the Adobe suite.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-amber-400/30">
+              <p className="text-lg leading-relaxed">
+                Fast forward to today, and here I am, turning my passion into a business. In 2023, I built my first client website for H3 Excavation & Construction using the full React Next.js tech stack. Now, I'm on a mission to help other small-to-medium businesses get an affordable, high-quality web presence that works as hard as they do.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-amber-400/30">
+              <p className="text-lg leading-relaxed">
+                I know what it's like to hustle, to juggle a million things at once, and to wonder if there's enough coffee in the world to keep it all running smoothly. My goal is simple: take the stress of your website off your plate so you can focus on what matters most—running your business.
+              </p>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-8">
+              <p className="text-2xl text-amber-400 font-bold mb-4">
+                Let's build something awesome together.
+              </p>
+              <p className="text-white/70 text-lg">
+                Whether you need a website overhaul, a fresh design, or just someone who gets it, I've got you covered.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </RetroBackground>
   )
