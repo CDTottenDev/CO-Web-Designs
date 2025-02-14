@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState, useMemo } from 'react'
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import { SearchBar } from '@/app/pricebreakdown/components/SearchBar'
 import { FilterDropdown } from '@/app/pricebreakdown/components/FilterDropdown'
 import { TotalPrice } from '@/app/pricebreakdown/components/TotalPrice'
@@ -93,51 +94,35 @@ export function FeatureKanban() {
       
       <TotalPrice totalPrice={totalPrice} />
       
-      <DragDropContext onDragEnd={onDragEnd}>
+      <DndProvider backend={HTML5Backend}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {complexityOrder.map((complexity) => (
-            <Droppable key={complexity} droppableId={complexity}>
-              {(provided) => (
-                <div
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                  className="bg-white rounded-lg shadow-md p-4"
-                >
-                  <h3 className="text-xl font-semibold mb-4 text-gray-800">{complexity}</h3>
-                  {filteredFeatures
-                    .filter(feature => feature.complexity === complexity)
-                    .map((feature, index) => (
-                      <Draggable key={feature.id} draggableId={feature.id} index={index}>
-                        {(provided) => (
-                          <div
-                            ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            className="bg-gray-50 p-4 mb-3 rounded-lg shadow-sm relative hover:shadow-md transition duration-300"
-                          >
-                            <h4 className="font-medium text-gray-800">{feature.name}</h4>
-                            <p className="text-sm text-gray-600 mt-1">
-                              ${feature.priceRange.min} - ${feature.priceRange.max}
-                            </p>
-                            <button
-                              onClick={() => deleteFeature(feature.id)}
-                              className="absolute top-2 right-2 text-red-500 hover:text-red-700 transition duration-300"
-                              aria-label={`Delete ${feature.name}`}
-                            >
-                              <TrashIcon className="h-5 w-5" />
-                            </button>
-                          </div>
-                        )}
-                      </Draggable>
-                    ))}
-                  {provided.placeholder}
-                </div>
-              )}
-            </Droppable>
+            <div key={complexity} className="bg-white rounded-lg shadow-md p-4">
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">{complexity}</h3>
+              {filteredFeatures
+                .filter(feature => feature.complexity === complexity)
+                .map((feature, index) => (
+                  <div
+                    key={feature.id}
+                    className="bg-gray-50 p-4 mb-3 rounded-lg shadow-sm relative hover:shadow-md transition duration-300"
+                  >
+                    <h4 className="font-medium text-gray-800">{feature.name}</h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      ${feature.priceRange.min} - ${feature.priceRange.max}
+                    </p>
+                    <button
+                      onClick={() => deleteFeature(feature.id)}
+                      className="absolute top-2 right-2 text-red-500 hover:text-red-700 transition duration-300"
+                      aria-label={`Delete ${feature.name}`}
+                    >
+                      <TrashIcon className="h-5 w-5" />
+                    </button>
+                  </div>
+                ))}
+            </div>
           ))}
         </div>
-      </DragDropContext>
+      </DndProvider>
     </div>
   )
 }
-
