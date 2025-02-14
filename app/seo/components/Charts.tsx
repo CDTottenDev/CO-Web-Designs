@@ -1,6 +1,14 @@
 'use client'
 
-import { Card, Title, AreaChart } from "@tremor/react"
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer
+} from 'recharts'
 
 interface DataPoint {
   month: string
@@ -14,22 +22,29 @@ export function SEOChart({ data }: { data: DataPoint[] }) {
   }
 
   return (
-    <AreaChart
-      className="h-72 mt-4"
-      data={data}
-      index="month"
-      categories={["withSEO", "withoutSEO"]}
-      colors={["teal", "rose"]}
-      valueFormatter={(number: number) => 
-        Intl.NumberFormat("us").format(number).toString()
-      }
-      yAxisWidth={60}
-      showAnimation={true}
-      showLegend={true}
-      showGridLines={true}
-      showYAxis={true}
-      showXAxis={true}
-    />
+    <ResponsiveContainer width="100%" height={300}>
+      <AreaChart
+        data={data}
+        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="month" />
+        <YAxis />
+        <Tooltip />
+        <Area 
+          type="monotone" 
+          dataKey="withSEO" 
+          stroke="#8884d8" 
+          fill="#8884d8" 
+        />
+        <Area 
+          type="monotone" 
+          dataKey="withoutSEO" 
+          stroke="#82ca9d" 
+          fill="#82ca9d" 
+        />
+      </AreaChart>
+    </ResponsiveContainer>
   )
 }
 
