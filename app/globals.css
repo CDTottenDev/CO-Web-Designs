@@ -197,4 +197,12 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
-} 
+
+  .transform-origin-center {
+    transform-origin: center center;
+  }
+}
+
+.bg-custom-color-1 { background-color: #yourColor1; }
+.bg-custom-color-2 { background-color: #yourColor2; }
+/* Add more as needed */ 

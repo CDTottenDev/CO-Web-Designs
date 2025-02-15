@@ -40,12 +40,6 @@ export default function RootLayout({
           <NavigationEvents />
           <Header />
           <main className="min-h-screen">
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:p-4"
-            >
-              Skip to main content
-            </a>
             {children}
           </main>
           <Analytics />

@@ -16,12 +16,17 @@ export default function FlipSection() {
   return (
     <button 
       onClick={handleFlip}
-      className="absolute bottom-0 right-0 w-full h-[calc(50vh/3)] border-2 border-black
-      bg-[#e2eba7] flex flex-col items-center justify-center
-      hover:opacity-90 transition-opacity cursor-pointer overflow-hidden z-10"
+      className="fixed bottom-2 right-0 w-full h-[calc(50vh/3)] border-2 border-black
+      bg-[#e2eba7] dark:bg-[#b5bd82] flex flex-col items-center justify-center
+      hover:scale-110 transition-all cursor-pointer overflow-hidden z-10
+      md:right-[50%] md:translate-x-[50%] md:w-[calc(50vh/3)]"
     >
-      <img src="/assets/icon-flip-more-black.svg" alt="More Icon" className="w-28 h-28" />
-      <span className="text-sm p-2">More</span>
+      <img 
+        src="/assets/icon-flip-more-black.svg" 
+        alt="More Icon" 
+        className="w-[10vw] h-[10vw] md:w-[5vw] md:h-[5vw] max-w-24 max-h-24" 
+      />
+      <span className="text-sm">More</span>
     </button>
   )
 } 
