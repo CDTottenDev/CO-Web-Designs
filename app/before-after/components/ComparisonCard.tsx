@@ -12,6 +12,12 @@ import {
   Tooltip,
 } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 interface ComparisonCardProps {
   type: "before" | "after"
@@ -86,18 +92,27 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({
           </div>
 
           {/* Score Details */}
-          <div className="grid grid-cols-2 gap-4">
-            {scoreItems.map((item) => (
-              <div key={item.label} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                <span className="text-2xl">{item.icon}</span>
-                <div>
-                  <p className="font-semibold">{item.label}</p>
-                  <p className="text-gray-600">{item.value}</p>
-                  <p className="text-sm text-gray-500">{item.description}</p>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="scores">
+              <AccordionTrigger className="text-sm font-medium">
+                View Detailed Scores
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  {scoreItems.map((item) => (
+                    <div key={item.label} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                      <span className="text-2xl">{item.icon}</span>
+                      <div>
+                        <p className="font-semibold">{item.label}</p>
+                        <p className="text-gray-600">{item.value}</p>
+                        <p className="text-sm text-gray-500">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           {/* Radar Chart */}
           <div className="mt-6">
