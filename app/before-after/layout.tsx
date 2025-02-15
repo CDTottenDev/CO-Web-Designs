@@ -37,47 +37,45 @@ export default function BeforeAfterLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
-        {children}
-        <Analytics />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Before & After Website Transformations",
-              "description": "Showcase of website redesign projects with performance improvements",
-              "url": "https://centraloregonwebdesigns.com/before-after",
-              "image": "https://centraloregonwebdesigns.com/og-before-after.jpg",
-              "mainEntity": {
-                "@type": "ItemList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Website Performance Improvements",
-                    "description": "Before and after website performance scores"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Accessibility Enhancements",
-                    "description": "Accessibility improvements in website redesigns"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "SEO Optimization",
-                    "description": "SEO improvements in website redesigns"
-                  }
-                ]
-              }
-            })
-          }}
-        />
-      </body>
-    </html>
+    <>
+      {children}
+      <Analytics />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Before & After Website Transformations",
+            "description": "Showcase of website redesign projects with performance improvements",
+            "url": "https://centraloregonwebdesigns.com/before-after",
+            "image": "https://centraloregonwebdesigns.com/og-before-after.jpg",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Website Performance Improvements",
+                  "description": "Before and after website performance scores"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Accessibility Enhancements",
+                  "description": "Accessibility improvements in website redesigns"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "SEO Optimization",
+                  "description": "SEO improvements in website redesigns"
+                }
+              ]
+            }
+          })
+        }}
+      />
+    </>
   )
 }

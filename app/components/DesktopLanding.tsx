@@ -82,7 +82,7 @@ export default function DesktopLanding() {
 
                       <Link href="/before-after" className="flex-[0_0_25vh] bg-[#ffd665] dark:bg-[#b99942] border-t-2 border-r-2 border-l-2 border-black
                       flex flex-col items-center justify-center">
-                      {/* <img src="#" alt="#" className="w-24 h-24" /> */}
+                      <img src="/assets/icon-before-after.webp" alt="Before & After Icon" className="w-24 h-24" />
                       <span className="text-sm p-2">Before & After</span>
                       </Link>
                   </div>

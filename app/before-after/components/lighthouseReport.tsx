@@ -1,4 +1,4 @@
-import type React from "react"
+import React from "react"
 
 interface LighthouseScoreProps {
   score: number
@@ -6,7 +6,7 @@ interface LighthouseScoreProps {
   color: string
 }
 
-export const LighthouseScore: React.FC<LighthouseScoreProps> = ({ score, label, color }) => {
+export const LighthouseScore = React.memo(({ score, label, color }: LighthouseScoreProps) => {
   const getColorClass = (color: string) => {
     switch (color) {
       case "red":
@@ -34,5 +34,7 @@ export const LighthouseScore: React.FC<LighthouseScoreProps> = ({ score, label, 
       </div>
     </div>
   )
-}
+})
+
+LighthouseScore.displayName = "LighthouseScore"
 
