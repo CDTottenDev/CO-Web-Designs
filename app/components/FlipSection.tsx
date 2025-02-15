@@ -16,9 +16,9 @@ export default function FlipSection() {
   return (
     <button 
       onClick={handleFlip}
-      className="fixed bottom-2 right-0 w-full h-[calc(50vh/3)] border-2 border-black
+      className="fixed bottom-0 right-0 w-full h-[calc(50vh/3)] border-2 border-black
       bg-[#e2eba7] dark:bg-[#b5bd82] flex flex-col items-center justify-center
-      hover:scale-110 transition-all cursor-pointer overflow-hidden z-10
+      hover:scale-100 md:hover:scale-110 transition-transform cursor-pointer overflow-hidden z-10
       md:right-[50%] md:translate-x-[50%] md:w-[calc(50vh/3)]"
     >
       <img 
