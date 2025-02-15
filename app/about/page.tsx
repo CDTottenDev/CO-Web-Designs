@@ -36,7 +36,7 @@ export default function AboutPage() {
 
             <div className="bg-[#d2ecc0] dark:bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg border-2 border-amber-400/30 z-20 ml-[-3rem] mt-[-1rem] mr-[3rem]">
               <p className="text-lg leading-relaxed">
-                Fast forward to today, and here I am, turning my passion into a business. In 2024, I built my first client website for H3 Excavation & Construction using the full React Next.js tech stack. Now, I'm on a mission to help other small-to-medium businesses get an affordable, high-quality web presence that works as hard as they do.
+                Fast forward to today, and here I am, turning my passion into a business. In 2024, I built my first client website for <a href="https://h3excavationandconst.com" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">H3 Excavation & Construction</a> using the full React Next.js tech stack. Now, I'm on a mission to help other small-to-medium businesses get an affordable, high-quality web presence that works as hard as they do.
               </p>
             </div>
 
