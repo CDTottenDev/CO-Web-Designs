@@ -1,19 +1,16 @@
 import type React from "react"
-import Image from "next/image"
-import { LighthouseScore } from "./components/lighthouseReport"
 import FloatingNav from "../components/FloatingNav"
-import { ImageModal } from "../components/ImageModal"
 import ComparisonCard from "./components/ComparisonCard"
 
 export default function BeforeAfterPage() {
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-100 to-green-100">
+    <main className="min-h-screen bg-gradient-to-br from-blue-100 to-green-100 dark:from-gray-900 dark:to-gray-800">
       <FloatingNav />
       <div className="container mx-auto px-4 py-[20vh]">
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-800 mb-2">Central Oregon Web Designs</h1>
-          <p className="text-xl text-green-700">Revamping Websites for Better Performance</p>
+          <h1 className="text-4xl font-bold text-blue-800 dark:text-blue-200 mb-2">Central Oregon Web Designs</h1>
+          <p className="text-xl text-green-700 dark:text-green-300">Revamping Websites for Better Performance</p>
         </header>
         {/* Mobile Before and After */}
         <div className="mt-12">
@@ -75,8 +72,8 @@ export default function BeforeAfterPage() {
         </div>
       </div>
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-semibold text-blue-800 mb-4">Why Choose Central Oregon Web Designs?</h3>
-        <ul className="text-lg text-green-700 space-y-2">
+        <h3 className="text-2xl font-semibold text-blue-800 dark:text-blue-200 mb-4">Why Choose Central Oregon Web Designs?</h3>
+        <ul className="text-lg text-green-700 dark:text-green-300 space-y-2">
           <li>Expertise in modern web technologies</li>
           <li>Focus on performance and user experience</li>
           <li>Tailored solutions for your business needs</li>
@@ -84,10 +81,10 @@ export default function BeforeAfterPage() {
         </ul>
       </div>
 
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center pb-20">
         <a
-          href="#contact"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition-colors duration-300"
+          href="/contact"
+          className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-colors duration-300"
         >
           Get Your Website Revamped Today!
         </a>

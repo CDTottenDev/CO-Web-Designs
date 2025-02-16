@@ -74,10 +74,10 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({
   ]
 
   return (
-    <Card className="w-full bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+    <Card className="w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
       <CardHeader>
         <CardTitle className={`text-2xl font-semibold text-center ${
-          type === "before" ? "text-red-700" : "text-green-700"
+          type === "before" ? "text-red-700 dark:text-red-400" : "text-green-700 dark:text-green-400"
         } mb-4`}>
           {device === "mobile" ? "Mobile" : "Desktop"} - {type === "before" ? "Before" : "After"}
         </CardTitle>
@@ -100,12 +100,12 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({
               <AccordionContent>
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   {scoreItems.map((item) => (
-                    <div key={item.label} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div key={item.label} className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                       <span className="text-2xl">{item.icon}</span>
                       <div>
-                        <p className="font-semibold">{item.label}</p>
-                        <p className="text-gray-600">{item.value}</p>
-                        <p className="text-sm text-gray-500">{item.description}</p>
+                        <p className="font-semibold dark:text-gray-100">{item.label}</p>
+                        <p className="text-gray-600 dark:text-gray-300">{item.value}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">{item.description}</p>
                       </div>
                     </div>
                   ))}

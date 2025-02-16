@@ -7,9 +7,9 @@ interface RetroBackgroundProps {
 const RetroBackground: React.FC<RetroBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#ebf3d8] to-[#919c77]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#ebf3d8] to-[#919c77] dark:from-[#1a1a1a] dark:to-[#2d2d2d]" />
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-20 dark:opacity-30"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cfilter id='grunge'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%25' height='100%25' filter='url(%23grunge)'/%3E%3C/svg%3E")`,
           mixBlendMode: 'multiply',

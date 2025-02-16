@@ -75,9 +75,15 @@ export default function MobileLanding() {
                 <span className="text-sm p-2">Service's</span>
               </Link>
 
+              <Link href="/before-after" className="fixed top-1/2 -translate-y-1/2 right-0 w-[40vw] h-[20vh] bg-[#f0e15b] dark:bg-[#b3a73b] border-2 border-black
+              flex flex-col items-center justify-center">
+                <img src="/assets/icon-before-after.webp" alt="Before and After Icon" className="w-20 h-20" />
+                <span className="text-sm p-2">before and after</span>
+              </Link>
+
               <Link href="/blog" className="flex-[0_0_33.35vh] bg-[#becf8d] dark:bg-[#7f8f56] border-t-2 border-r-2 border-l-2 border-black
               flex flex-col items-center justify-center">
-                <img src="/assets/icon-blog-black.svg" alt="Blog Icon" className="w-24 h-24" />
+                <img src="/assets/icon-blog-black.svg" alt="Blog Icon" className="w-24 h-24 mt-12" />
                 <span className="text-sm p-2">Blog</span>
               </Link>
             </div>
