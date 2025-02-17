@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ClientChart } from './components/ClientChart'
-import Link from 'next/link'
+import FloatingNav from '@/app/components/FloatingNav'
 
 // Updated data format
 const trafficData = [
@@ -31,52 +31,52 @@ export default function SEOPage() {
   }, [])
 
   return (
-    <div className="container mx-auto py-8 px-4">
+    <div className="container mx-auto py-36 px-4 dark:bg-zinc-900">
       {/* Hero Section */}
       <section className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">
+        <h1 className="text-4xl font-bold mb-4 text-foreground dark:text-white">
           Understanding SEO: Your Path to Online Success
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto dark:text-white/80">
           Discover how Search Engine Optimization can transform your website into a powerful tool for reaching more customers.
         </p>
       </section>
 
       {/* Key Benefits Cards */}
       <section className="grid md:grid-cols-3 gap-6 mb-16">
-        <Card className="bg-white/80 backdrop-blur">
+        <Card>
           <CardHeader>
-            <CardTitle className="text-teal-600">More Visitors</CardTitle>
+            <CardTitle className="text-foreground dark:text-white">More Visitors</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>When your website ranks higher in search results, more people can find your business naturally, without paying for ads.</p>
+            <p className="text-muted-foreground">When your website ranks higher in search results, more people can find your business naturally, without paying for ads.</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-white/80 backdrop-blur">
+        <Card>
           <CardHeader>
-            <CardTitle className="text-rose-600">Better Quality Leads</CardTitle>
+            <CardTitle className="text-foreground dark:text-white">Better Quality Leads</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>People searching for exactly what you offer are more likely to become customers. SEO helps you connect with these ideal customers.</p>
+            <p className="text-muted-foreground">People searching for exactly what you offer are more likely to become customers. SEO helps you connect with these ideal customers.</p>
           </CardContent>
         </Card>
   
-        <Card className="bg-white/80 backdrop-blur">
+        <Card>
           <CardHeader>
-            <CardTitle className="text-purple-600">Long-Term Growth</CardTitle>
+            <CardTitle className="text-foreground dark:text-white">Long-Term Growth</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Unlike paid advertising, SEO continues working for you 24/7, building your online presence over time with lasting results.</p>
+            <p className="text-muted-foreground">Unlike paid advertising, SEO continues working for you 24/7, building your online presence over time with lasting results.</p>
           </CardContent>
         </Card>
       </section>
 
       {/* Traffic Growth Chart */}
       <section className="mb-16">
-        <Card className="bg-white/80 backdrop-blur">
+        <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Website Traffic Growth Over Time</CardTitle>
+            <CardTitle className="text-2xl text-foreground">Website Traffic Growth Over Time</CardTitle>
             <p className="text-sm text-muted-foreground">
               Comparing monthly website visitors with and without SEO optimization
             </p>
@@ -89,24 +89,24 @@ export default function SEOPage() {
 
       {/* How SEO Works Section */}
       <section className="mb-16">
-        <Card className="bg-white/80 backdrop-blur">
+        <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">How SEO Works - In Simple Terms</CardTitle>
+            <CardTitle className="text-2xl text-foreground">How SEO Works - In Simple Terms</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-teal-600">1. Making Your Website Search-Friendly</h3>
-              <p>We ensure your website is easy for search engines like Google to read and understand. Think of it like organizing a library - when everything is well-organized, people can find what they're looking for quickly.</p>
+              <h3 className="text-xl font-semibold dark:text-white">1. Making Your Website Search-Friendly</h3>
+              <p className="text-muted-foreground">We ensure your website is easy for search engines like Google to read and understand. Think of it like organizing a library - when everything is well-organized, people can find what they're looking for quickly.</p>
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-rose-600">2. Creating Valuable Content</h3>
-              <p>We help you create content that answers your customers' questions. When people find your content helpful, search engines notice and show your website to more people.</p>
+              <h3 className="text-xl font-semibold dark:text-white">2. Creating Valuable Content</h3>
+              <p className="text-muted-foreground">We help you create content that answers your customers' questions. When people find your content helpful, search engines notice and show your website to more people.</p>
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-purple-600">3. Building Authority</h3>
-              <p>When other trusted websites link to yours, it's like getting recommendations from respected experts. This helps search engines trust your website more.</p>
+              <h3 className="text-xl font-semibold dark:text-white">3. Building Authority</h3>
+              <p className="text-muted-foreground">When other trusted websites link to yours, it's like getting recommendations from respected experts. This helps search engines trust your website more.</p>
             </div>
           </CardContent>
         </Card>
@@ -114,16 +114,20 @@ export default function SEOPage() {
 
       {/* Call to Action */}
       <section className="text-center">
-        <Card className="bg-white/80 backdrop-blur">
+        <Card>
           <CardContent className="py-8">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Ready to Grow Your Online Presence?</h2>
-            <p className="text-xl text-gray-600 mb-6">Let's work together to improve your website's visibility and attract more customers.</p>
-            <button className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Ready to Grow Your Online Presence?</h2>
+            <p className="text-xl text-muted-foreground mb-6">Let's work together to improve your website's visibility and attract more customers.</p>
+            <button 
+              onClick={() => window.location.href = '/contact'}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors"
+            >
               Get Your Free SEO Analysis
             </button>
           </CardContent>
         </Card>
       </section>
+      <FloatingNav />
     </div>
   )
 }

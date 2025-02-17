@@ -5,6 +5,7 @@ import { HowTo } from 'schema-dts'
 import RetroBackground2 from '../components/RetroBackground2'
 import { uniqueApproachMetadata } from '../how-we-work/components/UniqueApproachSection.metadata'
 import UniqueApproachSection from '../how-we-work/components/UniqueApproachSection'
+import FloatingNav from '../components/FloatingNav'
 
 
 export const metadata: Metadata = {
@@ -72,13 +73,13 @@ export default function TimelinePage() {
         }}
       />
       <RetroBackground2>
-        <main className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <main className="min-h-screen py-36 px-4 sm:px-6 lg:px-8 bg-white/35 dark:bg-gray-900/65">
           <div className="max-w-4xl mx-auto">
             <header className="text-center mb-12">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl mb-4">
               Our Web Design Process
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               A transparent journey from concept to launch
             </p>
           </header>
@@ -87,6 +88,7 @@ export default function TimelinePage() {
           </div>
         </main>
       </RetroBackground2>
+      <FloatingNav />
     </>
   )
 }

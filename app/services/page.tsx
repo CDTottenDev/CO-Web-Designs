@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ServiceCard from './components/ServiceCard'
+import FloatingNav from '../components/FloatingNav'
 
 const services = [
   {
@@ -49,7 +50,7 @@ const services = [
   },
   {
     title: "SEO Optimization",
-    description: "It's not just about looking good—it's about being found. Every website we build is optimized for on-page SEO and guaranteed to achieve a 98-100 performance score.",
+    description: "It's not just about looking good—it's about being found. Every website we build is optimized for on-page SEO/Local SEO and guaranteed to achieve a 98-100 Google Search Console score.",
     icon: "🔍",
     details: [
       "Blazing-fast load times",
@@ -71,10 +72,10 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen p-8 bg-gradient-to-b from-amber-50 to-orange-100">
+    <div className="min-h-screen p-8 pt-[35vw] md:pt-[15vw] bg-gradient-to-b from-amber-50 to-orange-100 dark:from-slate-900 dark:to-slate-800">
       <header className="mb-12 text-center">
-        <h1 className="text-5xl font-bold mb-4 text-orange-600 text-stroke">Our Web Design Services</h1>
-        <p className="text-xl text-orange-500">At Central Oregon Web Designs, we're all about making websites that work as hard as you do.</p>
+        <h1 className="text-5xl font-bold mb-4 text-orange-600 dark:text-orange-400 text-stroke">Our Web Design Services</h1>
+        <p className="text-xl text-orange-500 dark:text-orange-300">At Central Oregon Web Designs, we're all about making websites that work as hard as you do.</p>
       </header>
       <main>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,9 +89,9 @@ export default function Services() {
             />
           ))}
         </div>
-        <section className="mt-16 bg-orange-200 p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-4 text-orange-700">Why Choose Central Oregon Web Designs?</h2>
-          <ul className="list-disc list-inside text-orange-800">
+        <section className="mt-16 bg-orange-200 dark:bg-slate-700 p-8 rounded-lg shadow-lg">
+          <h2 className="text-3xl font-bold mb-4 text-orange-700 dark:text-orange-300">Why Choose Central Oregon Web Designs?</h2>
+          <ul className="list-disc list-inside text-orange-800 dark:text-orange-200">
             <li>Collaborative Approach: We work closely with you to understand your goals and vision.</li>
             <li>Transparency: No tech jargon or hidden fees. Just clear communication every step of the way.</li>
             <li>Tailored Solutions: Every business is unique, and so is every website we build.</li>
@@ -98,16 +99,17 @@ export default function Services() {
           </ul>
         </section>
         <section className="mt-16 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-orange-600">Ready to Get Started?</h2>
-          <p className="text-xl text-orange-500 mb-8">Building a website doesn't have to be complicated or stressful. Let's chat about your project and see how we can make your vision a reality.</p>
-          <Link href="/contact" className="bg-orange-500 text-white font-bold py-3 px-6 rounded-full hover:bg-orange-600 transition-colors">
+          <h2 className="text-3xl font-bold mb-4 text-orange-600 dark:text-orange-400">Ready to Get Started?</h2>
+          <p className="text-xl text-orange-500 dark:text-orange-300 mb-8">Building a website doesn't have to be complicated or stressful. Let's chat about your project and see how we can make your vision a reality.</p>
+          <Link href="/contact" className="bg-orange-500 dark:bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-orange-600 dark:hover:bg-blue-700 transition-colors">
             Schedule Your Free Consultation
           </Link>
         </section>
       </main>
-      <footer className="mt-16 text-center text-orange-500">
-        <p>© 2023 Central Oregon Web Designs. All rights reserved.</p>
+      <footer className="mt-16 text-center text-orange-500 dark:text-orange-300">
+        <p>© 2025 Central Oregon Web Designs. All rights reserved.</p>
       </footer>
+      <FloatingNav />
     </div>
   )
 }

@@ -81,7 +81,7 @@ export default function HowWeWorkLayout({
           ],
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+1-541-555-1234",
+            telephone: "#",
             contactType: "customer service",
           },
         }}

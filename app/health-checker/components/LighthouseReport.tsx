@@ -32,20 +32,20 @@ interface AuditResult {
     ];
   
     const getColorClass = (score: number) => {
-      if (score >= 90) return 'bg-green-500';
-      if (score >= 50) return 'bg-yellow-500';
-      return 'bg-red-500';
+      if (score >= 90) return 'bg-green-500 dark:bg-green-600';
+      if (score >= 50) return 'bg-yellow-500 dark:bg-yellow-600';
+      return 'bg-red-500 dark:bg-red-600';
     };
   
     return (
-      <div className="mt-6">
+      <div className="mt-6 text-gray-700 dark:text-gray-300">
         <h2 className="text-xl font-semibold mb-4">Lighthouse Report</h2>
         <div className="space-y-6">
           {categories.map((category) => (
-            <div key={category.name} className="bg-gray-100 p-4 rounded-lg">
+            <div key={category.name} className="bg-gray-100 p-4 rounded-lg dark:bg-gray-700">
               <h3 className="text-lg font-medium mb-2">{category.name}</h3>
               <div className="relative pt-1 mb-4">
-                <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300 dark:bg-gray-600">
                   <div
                     style={{ width: `${category.score}%` }}
                     className={`shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center ${getColorClass(
@@ -54,7 +54,7 @@ interface AuditResult {
                   ></div>
                 </div>
                 <div className="text-right">
-                  <span className="text-sm font-semibold inline-block text-gray-600">
+                  <span className="text-sm font-semibold inline-block text-gray-600 dark:text-gray-300">
                     {category.score}%
                   </span>
                 </div>
@@ -65,7 +65,7 @@ interface AuditResult {
                   {category.audits.map((audit) => (
                     <li key={audit.id} className="border-b pb-2">
                       <h5 className="font-medium">{audit.title}</h5>
-                      <p className="text-sm text-gray-600">{audit.description}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{audit.description}</p>
                       <div className="mt-1 flex items-center">
                         <div className={`w-3 h-3 rounded-full mr-2 ${getColorClass(audit.score * 100)}`}></div>
                         <span className="text-sm font-medium">{Math.round(audit.score * 100)}%</span>

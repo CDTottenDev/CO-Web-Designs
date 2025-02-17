@@ -53,9 +53,9 @@ export default function CollapsibleSection({ title, description, children, index
           delay: index * 0.15,
           ease: "easeOut"
         }}
-        className={`bg-white/20 rounded-lg shadow-lg p-6 ${isEven ? 'text-left' : 'text-right'}`}
+        className={`bg-indigo-50/80 dark:bg-indigo-900/20 rounded-lg shadow-lg p-6 w-[50vw] ${isEven ? 'mr-auto ml-0 text-left' : 'ml-auto mr-0 text-right'}`}
       >
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        <h3 className="text-xl font-semibold text-indigo-900 dark:text-indigo-200 mb-2">
           {title}
         </h3>
         <motion.div
@@ -63,7 +63,7 @@ export default function CollapsibleSection({ title, description, children, index
           animate={{ opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.4, delay: (index * 0.15) + 0.2 }}
         >
-          <p className="text-gray-600">{description}</p>
+          <p className="text-indigo-800/80 dark:text-indigo-100/80">{description}</p>
         </motion.div>
       </motion.div>
       {children}

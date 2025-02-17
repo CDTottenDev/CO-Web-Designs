@@ -7,6 +7,7 @@ export interface BlogPost {
     slug: string
     readingTime: string
     image: string
+    content?: string
   }
   
   export interface Category {

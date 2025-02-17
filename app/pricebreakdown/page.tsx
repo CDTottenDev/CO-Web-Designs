@@ -1,6 +1,6 @@
 import { FeatureKanban } from '@/app/pricebreakdown/components/FeatureKanban'
 import PricingColumns from '@/app/pricebreakdown/components/PricingColumns'
-import { Footer } from '../components/footer'
+import FloatingNav from '@/app/components/FloatingNav'
 
 const pricingPlans = [
   {
@@ -23,7 +23,8 @@ const pricingPlans = [
         items: [
           "Up to 10 pages of content",
           "Basic image optimization",
-          "Integration of client-provided media"
+          "Integration of client-provided media",
+          "Database for CMS"
         ]
       },
       {
@@ -46,8 +47,8 @@ const pricingPlans = [
   },
   {
     name: "Monthly Subscription Plan",
-    description: "Ideal for growing businesses requiring more advanced features and customization.",
-    price: "$5,000 - $10,000",
+    description: "À la carte pricing, starting at $150/month. Flexible billing options available. Total price will vary based on the scope of the project. -------------------------------Below is a list of everything included in the monthly plan.",
+    price: "$150/month",
     features: [
       {
         category: "Design & Development",
@@ -65,7 +66,9 @@ const pricingPlans = [
           "Up to 20 pages of content",
           "Advanced image and video optimization",
           "Custom icon design",
-          "Stock photo selection and integration"
+          "Custom Graphic Design",
+          "Custom Illustrations",
+          "Database for CMS"
         ]
       },
       {
@@ -80,7 +83,7 @@ const pricingPlans = [
       {
         category: "Support & Maintenance",
         items: [
-          "60 days of post-launch support",
+          "90 days of post-launch support minimum then continues through the duration of the contract",
           "Comprehensive website training session",
           "Monthly maintenance and security updates",
           "Basic speed optimization"
@@ -92,23 +95,24 @@ const pricingPlans = [
 
 export default function PriceBreakdown() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-emerald-400 to-teal-400">
-      <section id="pricing" className="py-16 ">
+    <div className="min-h-screen pt-[25vw] md:pt-[5vw] bg-gradient-to-r from-emerald-400 to-teal-400 dark:from-emerald-700 dark:to-teal-700">
+      <section id="pricing" className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-900">Pricing & Features</h2>
-          <p className="text-xl text-center text-gray-600 mb-16">We have a flexible pricing plan that allows you to choose the features you need.</p>
-          <PricingColumns plans={pricingPlans} />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 md:mb-12 text-gray-900 dark:text-gray-100">Pricing & Features</h2>
+          <p className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 mb-8 md:mb-16">We have a flexible pricing plan that allows you to choose the features you need.</p>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
+            <PricingColumns plans={pricingPlans} />
+          </div>
         </div>
       </section>
       
-      <section id="feature-board" className="py-16 bg-white">
+      <section id="feature-board" className="py-8 md:py-16 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-900">Customize Your Features</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 md:mb-12 text-gray-900 dark:text-gray-100">Customize Your Features</h2>
           <FeatureKanban />
         </div>
       </section>
-
-      <Footer />
+      <FloatingNav />
     </div>
   )
 }

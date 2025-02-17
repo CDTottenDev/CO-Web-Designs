@@ -34,7 +34,7 @@ const TechStackGuide = () => {
       <h2 className="text-3xl font-bold text-center mb-8">Popular Tech Stacks for Web Development</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {techStacks.map((stack, index) => (
-          <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Card key={index} className="bg-zinc-100 dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader>
               <CardTitle className="text-2xl font-semibold">{stack.name}</CardTitle>
               <CardDescription className="text-lg">{stack.description}</CardDescription>

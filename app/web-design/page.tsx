@@ -1,6 +1,6 @@
-import Image from "next/image"
 import type { Metadata } from "next"
 import WebDesignContent from "./components/WebDesignContent"
+import FloatingNav from "@/app/components/FloatingNav"
 
 export const metadata: Metadata = {
   title: "Web Design in 2025 | Central Oregon Web Design",
@@ -11,8 +11,9 @@ export const metadata: Metadata = {
 
 export default function WebDesignPage() {
   return (
-    <div className="min-h-screen bg-pastel-yellow font-retro">
+    <div className="min-h-screen bg-pastel-yellow dark:bg-zinc-900 font-retro">
       <WebDesignContent />
+      <FloatingNav />
     </div>
   )
 }

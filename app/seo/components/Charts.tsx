@@ -27,21 +27,23 @@ export function SEOChart({ data }: { data: DataPoint[] }) {
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="month" />
-        <YAxis />
-        <Tooltip />
+        <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
+        <XAxis dataKey="month" className="text-sm" />
+        <YAxis className="text-sm" />
+        <Tooltip wrapperClassName="bg-background text-foreground rounded-lg border shadow-sm" />
         <Area 
           type="monotone" 
           dataKey="withSEO" 
-          stroke="#8884d8" 
-          fill="#8884d8" 
+          stroke="hsl(var(--primary))" 
+          fill="hsl(var(--primary))" 
+          fillOpacity={0.3}
         />
         <Area 
           type="monotone" 
           dataKey="withoutSEO" 
-          stroke="#82ca9d" 
-          fill="#82ca9d" 
+          stroke="hsl(var(--secondary))" 
+          fill="hsl(var(--secondary))" 
+          fillOpacity={0.3}
         />
       </AreaChart>
     </ResponsiveContainer>

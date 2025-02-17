@@ -42,7 +42,7 @@ const BusinessNeedsExplorer = () => {
     <div className="space-y-8">
       <h2 className="text-3xl font-bold text-center mb-8">Explore Web Development Needs by Business Type</h2>
       <Tabs defaultValue={businessTypes[0].type}>
-        <TabsList className="justify-center">
+        <TabsList className="justify-center bg-zinc-100 dark:bg-gray-800">
           {businessTypes.map((business) => (
             <TabsTrigger key={business.type} value={business.type}>
               {business.type}
@@ -51,9 +51,9 @@ const BusinessNeedsExplorer = () => {
         </TabsList>
         {businessTypes.map((business) => (
           <TabsContent key={business.type} value={business.type}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-zinc-100 dark:bg-gray-800">
               {business.needs.map((need, index) => (
-                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card key={index} className="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
                     <CardTitle className="text-xl font-semibold">{need.title}</CardTitle>
                   </CardHeader>

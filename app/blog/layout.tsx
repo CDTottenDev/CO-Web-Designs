@@ -70,13 +70,13 @@ const jsonLd = {
   "@type": "WebSite",
   name: "Web Design Blog",
   description: "Expert web design tips, trends, and insights",
-  url: "https://your-domain.com",
+  url: "https://www.centraloregonwebdesigns.com/blog",
   publisher: {
     "@type": "Organization",
-    name: "Your Company Name",
+    name: "Central Oregon Web Designs",
     logo: {
       "@type": "ImageObject",
-      url: "https://your-domain.com/logo.png",
+      url: "https://www.centraloregonwebdesigns.com/logo.png",
     },
   },
 }

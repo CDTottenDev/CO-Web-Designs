@@ -1,8 +1,8 @@
 export default function LighthouseImportance() {
     return (
-      <div className="bg-white rounded-lg shadow-md p-4">
-        <h2 className="text-2xl font-bold mb-4 text-blue-600">Why Lighthouse Scores Matter</h2>
-        <div className="space-y-4">
+      <div className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-800">
+        <h2 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Why Lighthouse Scores Matter</h2>
+        <div className="space-y-4 text-gray-700 dark:text-gray-300">
           <p>
             In today's digital landscape, having a high-performing website is crucial for businesses
             that rely on online visibility to attract customers. Google's Lighthouse tool provides

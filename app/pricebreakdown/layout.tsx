@@ -13,7 +13,7 @@ export default function PriceBreakdownLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-teal-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-400 via-teal-50 to-green-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 px-4 sm:px-0">
       <main>{children}</main>
     </div>
   )
