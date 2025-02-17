@@ -56,12 +56,12 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function BlogPost({ params }: Props) {
-  const { slug } = params
-  const post = await getPost(slug)
+export default async function BlogPostPage({ params }: any) {
+  const { slug } = params;
+  const post = await getPost(slug);
 
   if (!post) {
-    return notFound()
+    return notFound();
   }
 
   return (
