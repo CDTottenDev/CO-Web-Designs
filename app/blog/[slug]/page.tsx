@@ -40,11 +40,7 @@ async function getPost(slug: string): Promise<BlogPost | null> {
   }
 }
 
-interface PageProps {
-  params: { slug: string };
-}
-
-export default async function BlogPostPage({ params }: PageProps) {
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params
   
   const post = await getPost(slug)
