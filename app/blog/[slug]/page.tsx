@@ -3,11 +3,17 @@ import { notFound } from 'next/navigation'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { BlogPost } from '@/app/blog/types/blog'
+import type { BlogPost } from '@/app/blog/types/blog'
 import RetroBackground from '@/app/components/RetroBackground'
 import ArticleRenderer from '@/app/blog/components/ui/ArticleRenderer'
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+type Props = {
+  params: {
+    slug: string
+  }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(params.slug)
   if (!post) return {}
   
@@ -40,16 +46,22 @@ async function getPost(slug: string): Promise<BlogPost | null> {
   }
 }
 
-export default async function BlogPostPage({
-  params
-}: {
-  params: { slug: string }
-}) {
-  const { slug } = params;
-  const post = await getPost(slug);
+export async function generateStaticParams() {
+  // This should return an array of all possible slugs
+  const postsDirectory = path.join(process.cwd(), 'app/blog/posts')
+  const fileNames = fs.readdirSync(postsDirectory)
+  
+  return fileNames.map(fileName => ({
+    slug: fileName.replace(/\.md$/, '')
+  }))
+}
+
+export default async function BlogPost({ params }: Props) {
+  const { slug } = params
+  const post = await getPost(slug)
 
   if (!post) {
-    return notFound();
+    return notFound()
   }
 
   return (
