@@ -14,7 +14,9 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await getPost(params.slug)
+  const slug = await params.slug
+  const post = await getPost(slug)
+  
   if (!post) return {}
   
   return {
