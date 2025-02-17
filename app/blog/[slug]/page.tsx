@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import fs from 'fs'
 import path from 'path'
@@ -8,13 +8,12 @@ import RetroBackground from '@/app/components/RetroBackground'
 import ArticleRenderer from '@/app/blog/components/ui/ArticleRenderer'
 
 type Props = {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await getPost(params.slug)
+  const { slug } = await params
+  const post = await getPost(slug)
   if (!post) return {}
   
   return {
@@ -47,7 +46,6 @@ async function getPost(slug: string): Promise<BlogPost | null> {
 }
 
 export async function generateStaticParams() {
-  // This should return an array of all possible slugs
   const postsDirectory = path.join(process.cwd(), 'app/blog/posts')
   const fileNames = fs.readdirSync(postsDirectory)
   
@@ -56,12 +54,12 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function BlogPostPage({ params }: any) {
-  const { slug } = params;
-  const post = await getPost(slug);
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = await getPost(slug)
 
   if (!post) {
-    return notFound();
+    return notFound()
   }
 
   return (
