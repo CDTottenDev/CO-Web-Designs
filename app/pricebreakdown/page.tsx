@@ -95,7 +95,8 @@ const pricingPlans = [
 
 export default function PriceBreakdown() {
   return (
-    <div className="min-h-screen pt-[25vw] md:pt-[5vw] bg-gradient-to-r from-emerald-400 to-teal-400 dark:from-emerald-700 dark:to-teal-700">
+    <div className="min-h-screen pt-[25vw] md:pt-[15vw] bg-gradient-to-r from-emerald-200 to-teal-400 dark:from-emerald-700 dark:to-teal-700">
+      <FloatingNav />
       <section id="pricing" className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 md:mb-12 text-gray-900 dark:text-gray-100">Pricing & Features</h2>

@@ -1,23 +1,17 @@
 'use client'
 
-import { useState } from 'react'
 import { useFormStatus } from 'react-dom'
 import { submitForm } from '../actions/submitForm'
 
 export default function ContactForm() {
   const { pending } = useFormStatus()
-  // const [state, formAction] = useFormState(submitForm, { message: '' })
-  // const [isSubmitting, setIsSubmitting] = useState(false)
-
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault()
-  //   setIsSubmitting(true)
-  //   await formAction(new FormData(e.currentTarget))
-  //   setIsSubmitting(false)
-  // }
 
   return (
-    <form action={submitForm} className="space-y-6">
+    <form 
+      action="https://formspree.io/f/mrbewpba" 
+      method="POST"
+      className="space-y-6"
+    >
       <div>
         <label htmlFor="name" className="block mb-2 font-medium text-gray-700 dark:text-gray-200">
           Name

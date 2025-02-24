@@ -110,7 +110,7 @@ export default function DesktopLanding() {
                       <span className="text-sm p-2">Knowledge Hub</span>
                       </Link>
 
-                      <Link href="/#" className="flex-[0_0_25vh] bg-[#98ccad] dark:bg-[#4d805f] 
+                      <Link href="#" className="flex-[0_0_25vh] bg-[#98ccad] dark:bg-[#4d805f] 
                       border-l-2 border-t-2 border-r-2 border-black
                       flex flex-col items-center justify-center">
                       {/* <img src="#" alt="#" className="w-24 h-24" />
