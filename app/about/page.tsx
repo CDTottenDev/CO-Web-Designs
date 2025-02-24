@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <RetroBackground>
       <FloatingNav />
-      <div className="flex items-center justify-center min-h-screen py-[15vw] bg-black/15 dark:bg-black/70">
+      <div className="flex items-center justify-center min-h-screen py-[30vw] md:py-[15vw] bg-black/15 dark:bg-black/70">
         <div className="max-w-4xl px-6 space-y-12">
           {/* Hero Section */}
           <div className="text-center mb-16">
