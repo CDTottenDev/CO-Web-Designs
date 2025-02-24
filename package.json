@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --legacy-peer-deps",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -48,5 +48,9 @@
     "prisma": "^5.10.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "resolutions": {
+    "@formspree/react/react": "19.0.0",
+    "@formspree/react/react-dom": "19.0.0"
   }
 }

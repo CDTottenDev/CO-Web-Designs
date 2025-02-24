@@ -1,7 +1,6 @@
 'use client'
 
 import { useFormStatus } from 'react-dom'
-import { submitForm } from '../actions/submitForm'
 
 export default function ContactForm() {
   const { pending } = useFormStatus()
