@@ -4,14 +4,12 @@ export interface BlogPost {
     excerpt: string
     date: string
     category: string
-    slug: string
     readingTime: string
     image: string
   }
   
   export interface Category {
     name: string
-    slug: string
     count: number
   }
   

@@ -51,7 +51,7 @@ export function BlogSidebar({ categories, onSearch, className }: BlogSidebarProp
               <nav className="space-y-1">
                 {categories.map((category) => (
                   <Button
-                    key={category.slug}
+                    key={category.name}
                     variant="ghost"
                     className="w-full justify-start text-red-700 hover:text-red-900 hover:bg-red-50 dark:text-red-300 dark:hover:text-red-100 dark:hover:bg-red-900/50"
                     onClick={() => onSearch(category.name)}

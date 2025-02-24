@@ -11,7 +11,7 @@ interface BlogPostCardProps {
 
 export function BlogPostCard({ post }: BlogPostCardProps) {
   return (
-    <Link href={`/blog/${post.slug}`} prefetch={false}>
+    <Link href="/blog/web-design-trends-2025" prefetch={false}>
       <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300 border-red-100">
         <CardHeader className="p-0">
           <div className="aspect-video relative">

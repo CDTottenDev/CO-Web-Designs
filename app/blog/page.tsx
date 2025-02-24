@@ -21,7 +21,6 @@ const samplePosts: BlogPost[] = [
     excerpt: "Discover the latest web design trends that will dominate the digital landscape in 2025...",
     date: "2024-01-19",
     category: "Design Trends",
-    slug: "web-design-trends-2025",
     readingTime: "5 min read",
     image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIHJ4PSIyMCIgZmlsbD0iIzFFMUUyRSIvPgogIDxyZWN0IHg9IjIwIiB5PSI1MCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyMDAiIHJ4PSIxNSIgZmlsbD0iIzJFMkUzRSIgc3Ryb2tlPSIjMDBENDNGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjgwIiByPSIxNSIgZmlsbD0iIzAwRDQzRiIvPgogIDxyZWN0IHg9IjgwIiB5PSI3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyMCIgcng9IjEwIiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjgiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjEzMCIgcj0iMTAiIGZpbGw9IiNGRkQ3MDAiLz4KICA8cmVjdCB4PSI4MCIgeT0iMTIwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE1IiByeD0iNy41IiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjE3MCIgcj0iMTAiIGZpbGw9IiNGRjZCNkIiLz4KICA8cmVjdCB4PSI4MCIgeT0iMTYwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE1IiByeD0iNy41IiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iMjIwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iIzAwRDQzRiIvPgogIDx0ZXh0IHg9IjUwIiB5PSIyNTAiIGZpbGw9IiNGRkYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiPjEwIEVzc2VudGlhbCBXZWIgRGVzaWduIFRyZW5kcyBmb3IgMjAyNTwvdGV4dD4KPC9zdmc+",
   },
@@ -29,9 +28,9 @@ const samplePosts: BlogPost[] = [
 ]
 
 const sampleCategories: Category[] = [
-  { name: "Design Trends", slug: "design-trends", count: 12 },
-  { name: "UI/UX", slug: "ui-ux", count: 8 },
-  { name: "Development", slug: "development", count: 15 },
+  { name: "Design Trends", count: 12 },
+  { name: "UI/UX", count: 8 },
+  { name: "Development", count: 15 },
   // Add more categories...
 ]
 
@@ -75,7 +74,7 @@ export default function BlogPage() {
               </h1>
 
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {filteredPosts.map((post) => (
+                {samplePosts.map((post) => (
                   <BlogPostCard key={post.id} post={post} />
                 ))}
               </div>
