@@ -28,7 +28,7 @@ export default function MobileLanding() {
               <Link href="/prices" className="flex-1 bg-[#d3dfae] dark:bg-[#94a562] border-l-2 border-b-2 border-black
               flex flex-col items-center justify-center">
                 <img src="/assets/icon-price-black.svg" alt="Price Icon" className="w-28 h-28" />
-                <span className="text-sm p-2">Price's</span>
+                <span className="text-sm p-2">Prices</span>
               </Link>
 
             </div>
@@ -44,7 +44,7 @@ export default function MobileLanding() {
               <Link href="/management-services" className="flex-[0_0_25vh] bg-[#d5caaf] dark:bg-[#a5997a] border-l-2 border-black
               flex flex-col items-center justify-center">
                 <img src="/assets/icon-back-management-black.svg" alt="Website Management Icon" className="w-28 h-28" />
-                <span className="text-sm p-2 text-center">Website Management Service's</span>
+                <span className="text-sm p-2 text-center">Website Management Services</span>
               </Link>
 
               <Link href="/health-checker" className="flex-[0_0_25vh] bg-[#dfbf84] dark:bg-[#a88d5a] border-l-2 border-t-2 border-black
@@ -72,7 +72,7 @@ export default function MobileLanding() {
               <Link href="/services" className="flex-[0_0_50vh] bg-[#eea450] dark:bg-[#9b6d39] border-r-2 border-t-2 border-l-2 border-black
               flex flex-col items-center justify-center">
                 <img src="/assets/icon-services-black.svg" alt="Services Icon" className="w-48 h-48" />
-                <span className="text-sm p-2">Service's</span>
+                <span className="text-sm p-2">Services</span>
               </Link>
 
               <Link href="/before-after" className="fixed top-1/2 -translate-y-1/2 right-0 w-[40vw] h-[20vh] bg-[#f0e15b] dark:bg-[#b3a73b] border-2 border-black
