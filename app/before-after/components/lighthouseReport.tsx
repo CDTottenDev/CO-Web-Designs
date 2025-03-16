@@ -1,40 +1,47 @@
-import React from "react"
+import React from "react";
 
 interface LighthouseScoreProps {
-  score: number
-  label: string
-  color: string
+  score: number;
+  label: string;
+  color: string;
 }
 
 export const LighthouseScore = React.memo(({ score, label, color }: LighthouseScoreProps) => {
-  const getColorClass = (color: string) => {
+  const getScoreElement = (score: number, color: string) => {
+    let bgColor;
+    
     switch (color) {
       case "red":
-        return "text-red-600"
+        bgColor = "bg-red-500";
+        break;
       case "orange":
-        return "text-orange-500"
+        bgColor = "bg-yellow-500";
+        break;
       case "yellow":
-        return "text-yellow-500"
+        bgColor = "bg-yellow-300";
+        break;
       case "green":
-        return "text-green-600"
+        bgColor = "bg-green-500";
+        break;
       default:
-        return "text-gray-600"
+        bgColor = "bg-gray-500";
     }
-  }
+    
+    return (
+      <div className={`w-16 h-16 ${bgColor} border-2 border-black text-white flex items-center justify-center relative retro-shadow`}>
+        <span className="text-xl font-bold">{score}</span>
+      </div>
+    );
+  };
 
   return (
-    <div className="flex items-center justify-between mb-2">
-      <span className="text-gray-700">{label}</span>
+    <div className="flex items-center justify-between mb-4">
+      <span className="text-black font-bold border-b-2 border-black px-2">{label}</span>
       <div className="flex items-center">
-        <div
-          className={`w-12 h-12 rounded-full border-4 ${getColorClass(color)} border-current flex items-center justify-center mr-2`}
-        >
-          <span className="text-lg font-semibold">{score}</span>
-        </div>
+        {getScoreElement(score, color)}
       </div>
     </div>
-  )
-})
+  );
+});
 
-LighthouseScore.displayName = "LighthouseScore"
-
+LighthouseScore.displayName = "LighthouseScore";

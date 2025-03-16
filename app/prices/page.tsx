@@ -3,22 +3,31 @@ import FloatingNav from '@/app/components/FloatingNav'
 
 export default function PricingPage() {
   return (
-    <div className="max-w-7xl mx-auto relative">
-      <FloatingNav />
-      <div className="text-center mb-16 pt-[15vw]">
-        <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
-          Pricing
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300">
-          <span className="font-semibold text-gray-800 dark:text-gray-100">Flexible Pricing Arrangements</span>
-          <br />
-          <span className="text-gray-500 dark:text-gray-400">Making sure your business</span>
-          <br />
-          <span className="text-gray-500 dark:text-gray-400">is moving forward</span>
-        </p>
+    <>
+    <FloatingNav />
+    <section className="py-16 pt-[15vh] bg-gradient-to-b from-white to-gray-100 min-h-screen">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-block bg-yellow-300 px-3 py-1 mb-6 border-2 border-black retro-shadow">
+            <span className="text-sm">Our pricing plans</span>
+          </div>
+          
+          <h1 className="text-5xl font-bold mb-6 tracking-tight">
+            <span className="underline decoration-red-500">Pricing</span>
+          </h1>
+          
+          <p className="text-xl">
+            <span className="font-semibold">Flexible Pricing Arrangements</span>
+            <br />
+            <span>Making sure your business</span>
+            <br />
+            <span>is moving forward</span>
+          </p>
+        </div>
+        
+        <PricingCards />
       </div>
-      <PricingCards />
-    </div>
+    </section>
+    </>
   )
 }
-

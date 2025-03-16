@@ -62,4 +62,3 @@ export function PricingCards() {
     </div>
   )
 }
-

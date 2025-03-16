@@ -1,9 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { Check, Sparkles, ArrowRight, Package } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/app/prices/components/ui/card'
-import { Button } from '@/app/prices/components/ui/button'
 import Link from 'next/link'
 
 interface PricingFeature {
@@ -25,85 +23,69 @@ interface PricingCardProps {
 }
 
 export function PricingCard({ plan }: PricingCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isCTAHovered, setIsCTAHovered] = useState(false)
-
   return (
-    <div className="relative group">
+    <div className="relative">
       {plan.popular && (
-        <div className="absolute -top-4 left-0 right-0 mx-auto w-40 rounded-full bg-primary/10 px-4 py-1 text-sm text-primary text-center transform -translate-y-1/2 flex items-center justify-center space-x-2">
-          <Sparkles className="w-4 h-4" />
-          <span>Most Popular</span>
+        <div className="absolute -top-5 -right-5 bg-red-500 text-white p-2 z-10 rotate-6 border-2 border-black">
+          <span className="font-bold flex items-center">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Most Popular
+          </span>
         </div>
       )}
-      <Card 
-        className={`h-full relative backdrop-blur-lg transition-all duration-300 ${
-          isHovered ? 'scale-105' : ''
-        } ${
-          plan.popular 
-            ? 'bg-card/80 border-primary/30' 
-            : 'bg-card/80 border-border'
-        } hover:border-primary/30`}
-      >
-        <CardHeader>
-          <CardTitle className="text-2xl font-bold text-foreground">
+      
+      <div className={`h-full border-2 border-black retro-shadow bg-white ${
+        plan.popular ? 'border-black' : 'border-black'
+      }`}>
+        <div className="p-6 border-b-2 border-black">
+          <h3 className="text-2xl font-bold">
             {plan.name}
-          </CardTitle>
-          <CardDescription className="mt-2 text-muted-foreground">
+          </h3>
+          <p className="mt-2 text-gray-600">
             {plan.description}
-          </CardDescription>
+          </p>
           <div className="mt-4">
-            <span className="text-4xl font-bold text-primary">
+            <span className="text-4xl font-bold">
               {plan.price}
             </span>
           </div>
-        </CardHeader>
-        <CardContent>
+        </div>
+        
+        <div className="p-6 pt-6">
           <ul className="space-y-4">
             {plan.features.map((feature, index) => (
               <li 
                 key={index} 
-                className="flex items-center space-x-3 text-foreground transition-transform duration-200 hover:translate-x-2"
+                className="flex items-start space-x-3"
               >
-                <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                <Check className="h-5 w-5 mt-1 text-black flex-shrink-0" />
                 <span>{feature.text}</span>
               </li>
             ))}
           </ul>
-        </CardContent>
-        <CardFooter className="flex flex-col space-y-4">
-          <div className="relative w-full group/cta">
-            <Link 
-              href="/pricebreakdown"
-              className={`w-full block p-4 rounded-lg border-2 transition-all duration-300 overflow-hidden relative
-                ${plan.popular ? 'border-primary' : 'border-secondary'}
-                bg-primary/5 hover:bg-primary/10`}
-            >
-              <div className="relative z-10 flex items-center justify-center space-x-3">
-                <Package className={`w-5 h-5 ${plan.popular ? 'text-primary' : 'text-secondary'}`} />
-                <span className="font-bold text-foreground">PACKAGE DETAILS</span>
-                <ArrowRight className={`w-5 h-5 transition-transform duration-300 
-                  ${isCTAHovered ? 'translate-x-2' : ''} 
-                  ${plan.popular ? 'text-primary' : 'text-secondary'}`} 
-                />
-              </div>
-            </Link>
-          </div>
+        </div>
+        
+        <div className="p-6 pt-0 flex flex-col space-y-4">
+          <Link 
+            href="/pricebreakdown"
+            className="w-full bg-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center"
+          >
+            <div className="flex items-center justify-center">
+              <Package className="w-5 h-5 mr-2" />
+              <span>PACKAGE DETAILS</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </div>
+          </Link>
           
           <Link href="/contact">
-            <Button 
-              className={`w-full py-6 text-lg font-semibold transition-all duration-300 ${
-                isHovered 
-                  ? 'bg-primary shadow-lg shadow-primary/50 text-primary-foreground' 
-                  : 'bg-primary/90 text-primary-foreground'
-              }`}
-            >
+            <button className={`w-full bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center ${
+              plan.popular ? 'bg-black' : 'bg-black'
+            }`}>
               {plan.buttonText}
-            </Button>
+            </button>
           </Link>
-        </CardFooter>
-      </Card>
+        </div>
+      </div>
     </div>
   )
 }
-

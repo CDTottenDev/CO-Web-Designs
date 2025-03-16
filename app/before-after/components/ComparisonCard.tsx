@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { ImageModal } from "@/app/components/ImageModal"
+import { ImageModal } from "@/app/components/ImageModal";
 import {
   RadarChart,
   PolarGrid,
@@ -10,26 +10,19 @@ import {
   Legend,
   ResponsiveContainer,
   Tooltip,
-} from "recharts"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "recharts";
 
 interface ComparisonCardProps {
-  type: "before" | "after"
-  device: "mobile" | "desktop"
-  imageSrc: string
-  altText: string
+  type: "before" | "after";
+  device: "mobile" | "desktop";
+  imageSrc: string;
+  altText: string;
   scores: {
-    performance: number
-    accessibility: number
-    bestPractices: number
-    seo: number
-  }
+    performance: number;
+    accessibility: number;
+    bestPractices: number;
+    seo: number;
+  };
 }
 
 const ComparisonCard: React.FC<ComparisonCardProps> = ({
@@ -44,7 +37,7 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({
     { category: "Accessibility", value: scores.accessibility },
     { category: "Best Practices", value: scores.bestPractices },
     { category: "SEO", value: scores.seo },
-  ]
+  ];
 
   const scoreItems = [
     {
@@ -71,72 +64,76 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({
       icon: "🔍",
       description: "Search engine optimization effectiveness",
     },
-  ]
+  ];
 
   return (
-    <Card className="w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-      <CardHeader>
-        <CardTitle className={`text-2xl font-semibold text-center ${
-          type === "before" ? "text-red-700 dark:text-red-400" : "text-green-700 dark:text-green-400"
-        } mb-4`}>
-          {device === "mobile" ? "Mobile" : "Desktop"} - {type === "before" ? "Before" : "After"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-6">
+    <div className={`w-full border-2 border-black ${type === "before" ? "bg-red-50" : "bg-green-50"} retro-shadow p-6`}>
+      <div className="relative mb-6">
+        <div className={`inline-block ${type === "before" ? "bg-red-500" : "bg-green-500"} text-white px-3 py-1 border-2 border-black mb-4`}>
+          <span className="font-bold">
+            {device === "mobile" ? "Mobile" : "Desktop"} - {type === "before" ? "Before" : "After"}
+          </span>
+        </div>
+      </div>
+
+      <div className="space-y-6">
+        <div className="border-2 border-black retro-shadow">
           <ImageModal src={imageSrc} alt={altText} />
-          <div className="flex items-center justify-center gap-1 mb-4 text-blue-600 font-medium">
-            <span className="text-xl">↑</span>
-            <span className="text-sm hidden md:inline">Click image to view full size</span>
-            <span className="text-sm md:hidden">Tap image to view full size</span>
-          </div>
+        </div>
+        
+        <div className="flex items-center justify-center gap-1 mb-4 text-black font-medium">
+          <span className="text-xl">↑</span>
+          <span className="text-sm hidden md:inline">Click image to view full size</span>
+          <span className="text-sm md:hidden">Tap image to view full size</span>
+        </div>
 
-          {/* Score Details */}
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="scores">
-              <AccordionTrigger className="text-sm font-medium">
-                View Detailed Scores
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-2 gap-4 mt-4">
-                  {scoreItems.map((item) => (
-                    <div key={item.label} className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                      <span className="text-2xl">{item.icon}</span>
-                      <div>
-                        <p className="font-semibold dark:text-gray-100">{item.label}</p>
-                        <p className="text-gray-600 dark:text-gray-300">{item.value}</p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
+        {/* Score Details */}
+        <div className="mt-4">
+          <button 
+            className="w-full bg-yellow-300 border-2 border-black py-2 font-bold retro-btn mb-4"
+            onClick={() => document.getElementById(`scores-${type}-${device}`)?.classList.toggle('hidden')}
+          >
+            View Detailed Scores
+          </button>
+          
+          <div id={`scores-${type}-${device}`} className="hidden">
+            <div className="grid grid-cols-2 gap-4 mt-4">
+              {scoreItems.map((item) => (
+                <div key={item.label} className="flex items-center space-x-3 p-3 bg-white border-2 border-black retro-shadow">
+                  <span className="text-2xl">{item.icon}</span>
+                  <div>
+                    <p className="font-bold">{item.label}</p>
+                    <p className="text-black">{item.value}</p>
+                    <p className="text-sm text-gray-700">{item.description}</p>
+                  </div>
                 </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
-          {/* Radar Chart */}
-          <div className="mt-6">
-            <ResponsiveContainer width="100%" height={300}>
-              <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
-                <PolarGrid />
-                <PolarAngleAxis dataKey="category" />
-                <PolarRadiusAxis angle={30} domain={[0, 100]} />
-                <Radar
-                  name="Score"
-                  dataKey="value"
-                  stroke={type === "before" ? "#ef4444" : "#22c55e"}
-                  fill={type === "before" ? "#ef4444" : "#22c55e"}
-                  fillOpacity={0.5}
-                />
-                <Legend />
-                <Tooltip />
-              </RadarChart>
-            </ResponsiveContainer>
+              ))}
+            </div>
           </div>
         </div>
-      </CardContent>
-    </Card>
-  )
-}
 
-export default ComparisonCard 
+        {/* Radar Chart */}
+        <div className="mt-6 border-2 border-black bg-white p-4 retro-shadow">
+          <ResponsiveContainer width="100%" height={300}>
+            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="category" />
+              <PolarRadiusAxis angle={30} domain={[0, 100]} />
+              <Radar
+                name="Score"
+                dataKey="value"
+                stroke={type === "before" ? "#ef4444" : "#22c55e"}
+                fill={type === "before" ? "#ef4444" : "#22c55e"}
+                fillOpacity={0.5}
+              />
+              <Legend />
+              <Tooltip />
+            </RadarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComparisonCard;

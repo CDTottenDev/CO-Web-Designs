@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/app/globals.css'
-import FloatingNav from '@/app/components/FloatingNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +17,6 @@ export default function ContactLayout({
 }) {
   return (
     <section className={inter.className}>
-      <FloatingNav />
       {children}
     </section>
   )

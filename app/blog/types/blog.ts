@@ -6,6 +6,8 @@ export interface BlogPost {
     category: string
     readingTime: string
     image: string
+    slug: string
+    content: string
   }
   
   export interface Category {

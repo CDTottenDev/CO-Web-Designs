@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #f8f5f2;
+  color: #232323;
+}
+
+.retro-shadow {
+  box-shadow: 5px 5px 0px #232323;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff6b6b;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.retro-btn {
+  transition: all 0.2s ease;
+}
+
+.retro-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #232323;
+}
+
+.retro-card {
+  transition: all 0.3s ease;
+  border: 2px solid #232323;
+}
+
+.retro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0px #232323;
+}
+
+.price-tag {
+  transform: rotate(-5deg);
+  display: inline-block;
+}

@@ -16,7 +16,7 @@ export default function PricingLayout({
   children: React.ReactNode
 }) {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-100 to-emerald-50 dark:from-emerald-900 dark:via-green-800 dark:to-emerald-900 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section>
       {children}
     </section>
   )

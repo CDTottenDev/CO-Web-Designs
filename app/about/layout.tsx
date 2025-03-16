@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'About | Your Site Name',
+  title: 'About | Colt Totten | Web Developer | Central Oregon Web Designs',
   description: 'About page description',
 }
 

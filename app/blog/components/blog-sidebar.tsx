@@ -5,8 +5,6 @@ import { Search } from "lucide-react"
 
 import { Input } from "@/app/blog/components/ui/input"
 import { Button } from "@/app/blog/components/ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/app/blog/components/ui/sheet"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/blog/components/ui/accordion"
 import type { Category } from "@/app/blog/types/blog"
 
 interface BlogSidebarProps {
@@ -27,45 +25,60 @@ export function BlogSidebar({ categories, onSearch, className }: BlogSidebarProp
     <aside
       className={`
       w-full md:w-64 md:flex-shrink-0 
-      bg-gradient-to-b from-red-50 to-white dark:from-red-950 dark:to-gray-900
-      border-r border-red-100 dark:border-red-900
+      bg-white
+      border-2 border-black retro-shadow
       ${className}
     `}
     >
       <div className="sticky top-0 p-4 space-y-6">
-        <form onSubmit={handleSearch} className="relative">
-          <Input
-            type="search"
-            placeholder="Search posts..."
-            className="pl-9 bg-white/50 backdrop-blur-sm border-red-200 focus-visible:ring-red-200 dark:bg-gray-800/50 dark:border-red-800 dark:focus-visible:ring-red-800"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-red-400 dark:text-red-600" />
-        </form>
+        <div className="relative">
+          <div className="inline-block bg-yellow-300 px-3 py-1 mb-4 border-2 border-black retro-shadow rotate-2">
+            <span className="text-sm font-bold">Blog Search</span>
+          </div>
+          
+          <form onSubmit={handleSearch} className="relative">
+            <Input
+              type="search"
+              placeholder="Search posts..."
+              className="pl-9 bg-white border-2 border-black focus-visible:ring-2 focus-visible:ring-red-500"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-black" />
+            <Button 
+              type="submit" 
+              className="mt-2 bg-black text-white px-4 py-2 font-bold retro-btn border-2 border-black hover:bg-gray-800"
+            >
+              Search
+            </Button>
+          </form>
+        </div>
 
-        <Accordion type="single" collapsible defaultValue="categories">
-          <AccordionItem value="categories">
-            <AccordionTrigger className="text-red-900 hover:text-red-700 dark:text-red-200 dark:hover:text-red-400">Categories</AccordionTrigger>
-            <AccordionContent>
-              <nav className="space-y-1">
-                {categories.map((category) => (
-                  <Button
-                    key={category.name}
-                    variant="ghost"
-                    className="w-full justify-start text-red-700 hover:text-red-900 hover:bg-red-50 dark:text-red-300 dark:hover:text-red-100 dark:hover:bg-red-900/50"
-                    onClick={() => onSearch(category.name)}
-                  >
-                    {category.name}
-                    <span className="ml-auto text-sm text-red-400 dark:text-red-600">{category.count}</span>
-                  </Button>
-                ))}
-              </nav>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        <div className="border-t-2 border-black my-6"></div>
+
+        <div className="border-2 border-black p-4 retro-shadow bg-white">
+          <div className="mb-4">
+            <h3 className="text-xl font-bold underline decoration-red-500">Categories</h3>
+          </div>
+          <nav className="space-y-2">
+            {categories.map((category) => (
+              <Button
+                key={category.name}
+                variant="ghost"
+                className="w-full justify-start text-black font-medium hover:bg-yellow-300 border-2 border-black mb-2 retro-btn"
+                onClick={() => onSearch(category.name)}
+              >
+                {category.name}
+                <span className="ml-auto text-sm bg-red-500 text-white px-2 py-1 border border-black">{category.count}</span>
+              </Button>
+            ))}
+          </nav>
+        </div>
+        
+        <div className="absolute -bottom-5 bg-red-500 text-white p-2 z-10 rotate-6 border-2 border-black">
+          <span className="font-bold">Explore!</span>
+        </div>
       </div>
     </aside>
   )
 }
-

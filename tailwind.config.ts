@@ -5,7 +5,7 @@ module.exports = {
     './pages/**/*.{ts,tsx,js,jsx,mdx}',
     './components/**/*.{ts,tsx,js,jsx,mdx}',
     './app/**/*.{ts,tsx,js,jsx,mdx}',
-    './src/**/*.{ts,tsx,jsx}',
+    './src/**/*.{ts,tsx,jsx,js}',
   ],
   theme: {
   	container: {
@@ -22,6 +22,20 @@ module.exports = {
   			ring: 'hsl(var(--ring))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+  			black: '#232323',
+  			red: {
+  				500: '#ff6b6b',
+  			},
+  			yellow: {
+  				300: '#ffd166',
+  				100: '#fff7e6',
+  			},
+  			blue: {
+  				100: '#e6f2ff',
+  			},
+  			green: {
+  				100: '#e6fff2',
+  			},
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
@@ -116,6 +130,7 @@ module.exports = {
   		},
   		fontFamily: {
   			retro: ["VT323", "monospace"],
+  			sans: ['Space Mono', 'monospace'],
   		},
   	}
   },

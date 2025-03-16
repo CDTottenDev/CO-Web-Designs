@@ -1,8 +1,9 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import './components/retro-styles.css'; // Add a CSS file for retro styles
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Before & After Website Transformations | Central Oregon Web Designs',
@@ -29,12 +30,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://centraloregonwebdesigns.com/before-after',
   },
-}
+};
 
 export default function BeforeAfterLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
@@ -77,5 +78,5 @@ export default function BeforeAfterLayout({
         }}
       />
     </>
-  )
+  );
 }

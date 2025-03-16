@@ -1,0 +1,106 @@
+/* retro-styles.css */
+.retro-theme {
+    --retro-shadow-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .retro-shadow {
+    box-shadow: 4px 4px 0 var(--retro-shadow-color);
+    position: relative;
+  }
+  
+  .retro-btn {
+    position: relative;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+    transform: translate(0, 0);
+  }
+  
+  .retro-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--retro-shadow-color);
+  }
+  
+  .retro-btn:active {
+    transform: translate(0px, 0px);
+    box-shadow: 2px 2px 0 var(--retro-shadow-color);
+  }
+  
+  /* Rotated elements */
+  .rotate-6 {
+    transform: rotate(6deg);
+  }
+  
+  .rotate-neg-6 {
+    transform: rotate(-6deg);
+  }
+  
+  /* Price tag styling */
+  .price-tag {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Accordion styling */
+  .retro-accordion-trigger {
+    width: 100%;
+    background-color: #fde047;
+    border: 2px solid black;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    margin-bottom: 0.25rem;
+  }
+  
+  .retro-accordion-trigger::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .retro-accordion-trigger[data-state="open"]::after {
+    content: '-';
+  }
+  
+  .retro-accordion-content {
+    overflow: hidden;
+    border: 2px solid black;
+    border-top: none;
+    padding: 1rem;
+    background-color: white;
+  }
+  
+  /* Custom underline */
+  .retro-underline {
+    text-decoration: underline;
+    text-decoration-color: #ef4444;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 4px;
+  }
+  
+  /* Override for recharts components to match retro style */
+  .recharts-polar-grid-angle line,
+  .recharts-polar-grid-concentric path {
+    stroke: black;
+    stroke-width: 1px;
+  }
+  
+  .recharts-polar-angle-axis-tick text {
+    font-weight: bold;
+    fill: black;
+  }
+  
+  .recharts-legend-item {
+    font-weight: bold;
+  }
+  
+  /* Image hover effects */
+  .retro-image-hover {
+    transition: transform 0.2s ease;
+  }
+  
+  .retro-image-hover:hover {
+    transform: scale(1.02);
+  }

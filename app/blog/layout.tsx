@@ -7,7 +7,7 @@ import "@/app/globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://centraloregonwebdesigns.com"),
   title: {
     default: "Web Design Blog | Expert Tips & Insights",
     template: "%s | Web Design Blog",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com",
+    url: "https://centraloregonwebdesigns.com",
     siteName: "Web Design Blog",
     title: "Web Design Blog | Expert Tips & Insights",
     description:
@@ -70,13 +70,13 @@ const jsonLd = {
   "@type": "WebSite",
   name: "Web Design Blog",
   description: "Expert web design tips, trends, and insights",
-  url: "https://your-domain.com",
+  url: "https://centraloregonwebdesigns.com",
   publisher: {
     "@type": "Organization",
-    name: "Your Company Name",
+    name: "Central Oregon Web Designs",
     logo: {
       "@type": "ImageObject",
-      url: "https://your-domain.com/logo.png",
+      url: "https://centraloregonwebdesigns.com/logo.png",
     },
   },
 }

@@ -1,4 +1,3 @@
-import { FeatureKanban } from '@/app/pricebreakdown/components/FeatureKanban'
 import PricingColumns from '@/app/pricebreakdown/components/PricingColumns'
 import FloatingNav from '@/app/components/FloatingNav'
 
@@ -47,7 +46,7 @@ const pricingPlans = [
   },
   {
     name: "Monthly Subscription Plan",
-    description: "À la carte pricing, starting at $150/month. Flexible billing options available. Total price will vary based on the scope of the project. -------------------------------Below is a list of everything included in the monthly plan.",
+    description: "Starting at $150/month. Flexible billing options available. Total price will vary based on the scope of the project after initial consultation.",
     price: "$150/month",
     features: [
       {
@@ -56,7 +55,7 @@ const pricingPlans = [
           "Premium custom responsive design",
           "Up to 10 unique page layouts",
           "Advanced SEO optimization",
-          "Custom contact and lead generation forms",
+          "Custom contact form",
           "Google Analytics and Google Search Console setup"
         ]
       },
@@ -95,26 +94,53 @@ const pricingPlans = [
 
 export default function PriceBreakdown() {
   return (
-    <div className="min-h-screen pt-[25vw] md:pt-[15vw] bg-gradient-to-r from-emerald-200 to-teal-400 dark:from-emerald-700 dark:to-teal-700">
+    <div className="min-h-screen pt-16 md:pt-24 bg-gradient-to-b from-white to-gray-100">
       <FloatingNav />
       <section id="pricing" className="py-8 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 md:mb-12 text-gray-900 dark:text-gray-100">Pricing & Features</h2>
-          <p className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 mb-8 md:mb-16">We have a flexible pricing plan that allows you to choose the features you need.</p>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
-            <PricingColumns plans={pricingPlans} />
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-yellow-300 px-3 py-1 mb-6 border-2 border-black retro-shadow">
+              <span className="text-sm font-bold">Pricing that makes sense</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Choose the plan that fits your <span className="underline decoration-red-500">business</span>
+            </h2>
+            <p className="text-lg mb-8 max-w-2xl mx-auto">
+              We have a flexible pricing plan that allows you to choose the features you need.
+            </p>
+          </div>
+          
+          <div className="relative">
+            <div className="absolute -top-5 -left-5 bg-red-500 text-white p-2 z-10 rotate-6 border-2 border-black hidden md:block">
+              <span className="price-tag font-bold">Pick your perfect plan!</span>
+            </div>
+            <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center relative z-0">
+              <PricingColumns plans={pricingPlans} />
+            </div>
           </div>
         </div>
       </section>
       
-      <section id="feature-board" className="py-8 md:py-16 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 md:mb-12 text-gray-900 dark:text-gray-100">Customize Your Features</h2>
-          <FeatureKanban />
+      <section className="py-8 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-red-500 px-3 py-1 mb-6 border-2 border-black retro-shadow">
+              <span className="text-sm text-white font-bold">Got questions?</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Let's talk about your <span className="underline decoration-yellow-300">project</span>
+            </h2>
+            <p className="text-lg mb-8 max-w-2xl mx-auto">
+              Contact us for a free consultation and we'll help you figure out which plan is best for you.
+            </p>
+            <a href="/contact" className="bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center">
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
+      
       <FloatingNav />
     </div>
   )
 }
-

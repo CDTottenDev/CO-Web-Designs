@@ -9,14 +9,21 @@ interface ServiceCardProps {
 
 const ServiceCard: FC<ServiceCardProps> = ({ title, description, icon, details }) => {
   return (
-    <div className="bg-orange-100 dark:bg-slate-700 rounded-lg p-6 shadow-lg transition-transform hover:scale-105">
-      <div className="text-4xl mb-4" aria-hidden="true">{icon}</div>
-      <h3 className="text-2xl font-bold mb-2 text-orange-700 dark:text-orange-300">{title}</h3>
-      <p className="mb-4 text-orange-800 dark:text-orange-200">{description}</p>
+    <div className="bg-white border-2 border-black retro-shadow p-6 transition-transform hover:translate-y-1 hover:translate-x-1 hover:shadow-sm">
+      <div className="inline-block bg-yellow-300 p-3 mb-4 border-2 border-black retro-shadow">
+        <span className="text-4xl" aria-hidden="true">{icon}</span>
+      </div>
+      <h3 className="text-2xl font-bold mb-2 underline decoration-red-500">{title}</h3>
+      <p className="mb-4 text-black">{description}</p>
       {details && details.length > 0 && (
-        <ul className="list-disc list-inside text-orange-700 dark:text-orange-200">
+        <ul className="space-y-2">
           {details.map((detail, index) => (
-            <li key={index}>{detail}</li>
+            <li key={index} className="flex items-start">
+              <div className="bg-black text-white w-5 h-5 flex items-center justify-center mr-3 mt-1 font-bold border-2 border-black flex-shrink-0">
+                ✓
+              </div>
+              <span>{detail}</span>
+            </li>
           ))}
         </ul>
       )}
@@ -25,4 +32,3 @@ const ServiceCard: FC<ServiceCardProps> = ({ title, description, icon, details }
 }
 
 export default ServiceCard
-

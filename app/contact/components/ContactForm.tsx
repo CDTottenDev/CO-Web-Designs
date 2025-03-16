@@ -12,7 +12,7 @@ export default function ContactForm() {
       className="space-y-6"
     >
       <div>
-        <label htmlFor="name" className="block mb-2 font-medium text-gray-700 dark:text-gray-200">
+        <label htmlFor="name" className="block mb-2 font-bold text-black">
           Name
         </label>
         <input
@@ -20,11 +20,12 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+          className="w-full px-3 py-2 border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
         />
       </div>
+      
       <div>
-        <label htmlFor="email" className="block mb-2 font-medium text-gray-700 dark:text-gray-200">
+        <label htmlFor="email" className="block mb-2 font-bold text-black">
           Email
         </label>
         <input
@@ -32,11 +33,12 @@ export default function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+          className="w-full px-3 py-2 border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
         />
       </div>
+      
       <div>
-        <label htmlFor="message" className="block mb-2 font-medium text-gray-700 dark:text-gray-200">
+        <label htmlFor="message" className="block mb-2 font-bold text-black">
           Message
         </label>
         <textarea
@@ -44,18 +46,21 @@ export default function ContactForm() {
           name="message"
           required
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+          className="w-full px-3 py-2 border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all duration-300"
         ></textarea>
       </div>
-      <button
-        type="submit"
-        disabled={pending}
-        className="w-full py-2 px-4 bg-teal-600 text-white font-semibold rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-teal-700 dark:hover:bg-teal-800"
-      >
-        {pending ? 'Sending...' : 'Send Message'}
-      </button>
+      
+      <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <button
+          type="submit"
+          disabled={pending}
+          className="bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center w-full disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {pending ? 'Sending...' : 'Send Message'}
+        </button>
+      </div>
+      
       <div id="form-message" aria-live="polite" className="mt-4 text-center"></div>
     </form>
   )
 }
-
