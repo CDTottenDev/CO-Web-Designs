@@ -12,13 +12,14 @@ import FAQSection from '../desktop-landing/faq';
 import CTASection from '../desktop-landing/cta-section';
 import ContactFormSection from '../desktop-landing/contact-form-section';
 import Footer from '../desktop-landing/footer';
-
+import PortfolioCTA from '../desktop-landing/portfolio-CTA';
 function DesktopLanding() {
   return (
     <div className="font-sans">
       <Header />
       <main>
         <HeroSection />
+        <PortfolioCTA />
         <ServicesSection />
         <PricingSection />
         <ProcessSection />

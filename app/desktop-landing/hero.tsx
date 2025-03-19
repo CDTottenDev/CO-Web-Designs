@@ -6,22 +6,30 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <div className="inline-block bg-yellow-300 px-3 py-1 mb-6 border-2 border-black retro-shadow">
-              <span className="text-sm">We build websites that work</span>
+            <div className="inline-block bg-yellow-300 px-3 py-1 mb-6 border-2 border-black retro-shadow -rotate-3">
+              <span className="text-sm font-bold">Warning: Extreme Talent Ahead</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Websites that <span className="underline decoration-red-500">convert</span> visitors into customers
+              You've Found Your <span className="underline decoration-red-500">Website Wizard</span>
             </h1>
             <p className="text-lg mb-8">
-              Professional web design services at prices that make sense for your business. Available nationwide and beyond.
+              Professional web design with 95% less boring. Available nationwide and guaranteed to include excessive creativity and dad jokes.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <a href="/contact" className="bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center">
-                Get Started
-              </a>
+              <div className="relative inline-block group">
+                <a href="/contact" className="bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center hover:bg-gray-800 transform transition-transform hover:-translate-y-1">
+                  Hire Me Before I Hire Myself →
+                </a>
+                <div className="absolute -top-4 -right-4 bg-red-500 text-white p-2 rotate-12 border-2 border-black">
+                  <span className="text-xs font-bold">95% Less Boring!</span>
+                </div>
+              </div>
               <a href="/prices" className="bg-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center">
                 See Pricing
               </a>
+            </div>
+            <div className="mt-4 bg-white p-2 inline-block border-2 border-black retro-shadow rotate-2">
+              <span className="text-sm font-bold">* Side effects may include: increased revenue</span>
             </div>
           </div>
           <div className="md:w-1/2 pl-0 md:pl-10">

@@ -27,6 +27,7 @@ const Header: React.FC = () => {
           <a href="/prices" className="nav-link py-1 font-bold">Pricing</a>
           <a href="/about" className="nav-link py-1">About</a>
           <a href="/before-after" className="nav-link py-1">Before & After</a>
+          <a href="https://cdtottendev.com" className="nav-link py-1">Portfolio</a>
           <a href="/blog" className="nav-link py-1">Blog</a>
           <a href="/contact" className="nav-link py-1 bg-black text-white px-3 retro-shadow">Contact</a>
         </nav>
