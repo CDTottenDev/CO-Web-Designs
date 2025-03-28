@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 const ContactFormSection: React.FC = () => {
@@ -38,9 +40,8 @@ const ContactFormSection: React.FC = () => {
               
               <div className="mb-6">
                 <h3 className="font-bold mb-2">Contact Information</h3>
-                <p className="mb-1">Email: hello@centraloregonwebdesigns.com</p>
-                <p className="mb-1">Phone: (555) 123-4567</p>
-                <p>Location: Polk County, Florida</p>
+                <p className="mb-1">Email: cowd@centraloregonwebdesigns.com</p>
+                <p className="mb-1">Phone: (458) 231-7495</p>
               </div>
               
               <div>

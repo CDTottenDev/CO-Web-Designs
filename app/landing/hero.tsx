@@ -13,12 +13,12 @@ const HeroSection: React.FC = () => {
               You've Found Your <span className="underline decoration-red-500">Website Wizard</span>
             </h1>
             <p className="text-lg mb-8">
-              Professional web design with 95% less boring. Available nationwide and guaranteed to include excessive creativity and dad jokes.
+              Professional web design with 95% less boring. Available nationwide and guaranteed to include excessive creativity.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <div className="relative inline-block group">
                 <a href="/contact" className="bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center hover:bg-gray-800 transform transition-transform hover:-translate-y-1">
-                  Hire Me Before I Hire Myself →
+                Hire Me Now—Before I Start Charging by the Minute! →
                 </a>
                 <div className="absolute -top-4 -right-4 bg-red-500 text-white p-2 rotate-12 border-2 border-black">
                   <span className="text-xs font-bold">95% Less Boring!</span>

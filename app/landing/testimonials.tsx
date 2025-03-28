@@ -3,11 +3,9 @@ import React from 'react';
 interface Testimonial {
   quote: string;
   author: string;
-  business: string;
-  location: string;
 }
 
-const TestimonialCard: React.FC<Testimonial> = ({ quote, author, business, location }) => (
+const TestimonialCard: React.FC<Testimonial> = ({ quote, author }) => (
   <div className="bg-white p-6 retro-card">
     <div className="mb-4">
       {[...Array(5)].map((_, i) => (
@@ -19,7 +17,6 @@ const TestimonialCard: React.FC<Testimonial> = ({ quote, author, business, locat
     <p className="mb-4 italic">"{quote}"</p>
     <div>
       <p className="font-bold">{author}</p>
-      <p className="text-sm">{business}, {location}</p>
     </div>
   </div>
 );
@@ -29,20 +26,14 @@ const TestimonialsSection: React.FC = () => {
     {
       quote: "Central Oregon Web Designs transformed our online presence. Sales increased 40% within the first three months of launching our new site!",
       author: "Sarah Johnson",
-      business: "Sunrise Bakery",
-      location: "Orlando, FL"
     },
     {
       quote: "Incredible value for the quality. Our new website looks like we spent thousands more than we actually did.",
       author: "Michael Chen",
-      business: "Green Leaf Landscaping",
-      location: "Tampa, FL"
     },
     {
       quote: "Not only did they build a beautiful website, but they taught us how to update it ourselves, saving us money long-term.",
       author: "Jessica Williams",
-      business: "Coastal Therapy",
-      location: "Miami, FL"
     }
   ];
 

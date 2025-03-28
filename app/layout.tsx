@@ -4,8 +4,6 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from 'next-themes'
-import './styles/flip.css'
-import { Header } from './components/header'
 import { NavigationEvents } from './components/NavigationEvents'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -38,7 +36,6 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavigationEvents />
-          <Header />
           <main className="min-h-screen">
             {children}
           </main>
