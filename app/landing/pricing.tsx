@@ -52,97 +52,60 @@ const PricingCard: React.FC<PricePackage> = ({ name, price, priceSubtext, descri
 const PricingSection: React.FC = () => {
   const packages: PricePackage[] = [
     {
-      name: "Basic Website",
-      price: "2,000",
-      priceSubtext: "/one-time",
-      description: "Perfect for any size project. We'll work with you to determine the scope of the project and provide a fixed cost estimate.",
+      name: "Essentials Plan",
+      price: "99/mo",
+      priceSubtext: "12-month contract (or $150/mo for 6-months)",
+      description: "Best for small local businesses or trades looking to get online quickly.",
       features: [
         {
-          category: "Design & Development",
+          category: "Included Features",
           items: [
-            "Custom responsive design for mobile and desktop",
-            "Up to 5 unique page layouts",
-            "Basic SEO optimization",
-            "Contact form integration",
-            "Google Analytics setup"
-          ]
-        },
-        {
-          category: "Content & Media",
-          items: [
-            "Up to 10 pages of content",
-            "Basic image optimization",
-            "Integration of client-provided media",
-            "Database for CMS"
-          ]
-        },
-        {
-          category: "Functionality",
-          items: [
-            "Simple content management system (CMS)",
-            "Social media links",
-            "Email newsletter signup form"
-          ]
-        },
-        {
-          category: "Support & Maintenance",
-          items: [
-            "30 days of post-launch support",
-            "Basic website training session",
-            "Monthly backup service"
-          ]
-        }
-      ],
-      buttonText: "Get Started"
-    },
-    {
-      name: "Monthly Subscription Plan",
-      price: "150",
-      priceSubtext: "/month",
-      description: "Starting at $150/month. Flexible billing options available.",
-      features: [
-        {
-          category: "Design & Development",
-          items: [
-            "Premium custom responsive design",
-            "Up to 10 unique page layouts",
-            "Advanced SEO optimization",
-            "Custom contact and lead generation forms",
-            "Google Analytics and Google Search Console setup"
-          ]
-        },
-        {
-          category: "Content & Media",
-          items: [
-            "Up to 20 pages of content",
-            "Advanced image and video optimization",
-            "Custom icon design",
-            "Custom Graphic Design",
-            "Custom Illustrations",
-            "Database for CMS"
-          ]
-        },
-        {
-          category: "Functionality",
-          items: [
-            "Advanced content management system",
-            "Blog or news section with categories and tags",
-            "Social media feed integration",
-            "Basic e-commerce functionality (up to 20 products)"
-          ]
-        },
-        {
-          category: "Support & Maintenance",
-          items: [
-            "90 days of post-launch support minimum then continues through the duration of the contract",
-            "Comprehensive website training session",
-            "Monthly maintenance and security updates",
-            "Basic speed optimization"
+            "5-page custom-coded website",
+            "Mobile & SEO optimized",
+            "Hosting & basic maintenance included",
+            "Optional buyout: $1,200"
           ]
         }
       ],
       highlight: true,
-      buttonText: "Subscribe Now"
+      buttonText: "Get Started"
+    },
+    {
+      name: "Custom Site Build",
+      price: "Starting at $1,500",
+      priceSubtext: "One-time payment, project-based pricing",
+      description: "Tailored for brands that want to stand out, with a one-time investment.",
+      features: [
+        {
+          category: "Included Features",
+          items: [
+            "Fully custom design & interactivity",
+            "Contact forms, galleries, advanced layout",
+            "Launch in 2–4 weeks",
+            "Free 30-day support post-launch",
+            "Optional maintenance: $75/month"
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    {
+      name: "Full-Service Retainer",
+      price: "250/mo",
+      priceSubtext: "6-month contract minimum",
+      description: "Ongoing updates, feature expansion, and technical peace of mind.",
+      features: [
+        {
+          category: "Included Features",
+          items: [
+            "All features from the Custom Build",
+            "Monthly content or feature updates",
+            "Priority support",
+            "Optional buyout: $1,200"
+          ]
+        }
+      ],
+      buttonText: "Book a Call"
     }
   ];
 
@@ -154,7 +117,7 @@ const PricingSection: React.FC = () => {
           <p className="max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <PricingCard key={index} {...pkg} />
           ))}

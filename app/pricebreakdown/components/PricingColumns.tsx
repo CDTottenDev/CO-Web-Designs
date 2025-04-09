@@ -26,12 +26,12 @@ const PricingColumns = ({ plans }: PricingProps) => {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
       {plans.map((plan, planIndex) => (
         <div key={planIndex} className="bg-white border-2 border-black retro-shadow overflow-hidden">
           <div className={`p-4 md:p-6 ${planIndex === 0 ? 'bg-yellow-300' : 'bg-red-500'}`}>
             <div className="relative">
-              {planIndex === 1 && (
+              {planIndex === 0 && (
                 <div className="absolute -top-5 -right-5 bg-yellow-300 text-black p-2 z-10 rotate-6 border-2 border-black">
                   <span className="price-tag font-bold">Popular Choice!</span>
                 </div>
@@ -75,7 +75,7 @@ const PricingColumns = ({ plans }: PricingProps) => {
             ))}
             <a 
               href="/contact" 
-              className={`bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center w-full mt-4 ${planIndex === 1 ? 'bg-red-500' : ''}`}
+              className={`bg-black text-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center w-full mt-4 ${planIndex === 0 ? 'bg-red-500' : ''}`}
             >
               Get Started
             </a>

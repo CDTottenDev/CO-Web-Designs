@@ -68,7 +68,7 @@ export function PricingCard({ plan }: PricingCardProps) {
         <div className="p-6 pt-0 flex flex-col space-y-4">
           <Link 
             href="/pricebreakdown"
-            className="w-full bg-white px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center"
+            className="w-full bg-orange-200 text-black px-8 py-3 font-bold retro-btn border-2 border-black inline-block text-center"
           >
             <div className="flex items-center justify-center">
               <Package className="w-5 h-5 mr-2" />

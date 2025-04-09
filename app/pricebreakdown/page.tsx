@@ -3,89 +3,118 @@ import FloatingNav from '@/app/components/FloatingNav'
 
 const pricingPlans = [
   {
-    name: "Fixed Cost Plan",
-    description: "Perfect for any size project. We'll work with you to determine the scope of the project and provide a fixed cost estimate.",
-    price: "$2,000",
+    name: "Essentials Plan",
+    description: "Perfect for small local businesses or trades looking to get online fast with a clean, custom-coded website and ongoing support.",
+    price: "$99/mo (12-month contract) or $150/mo (6-month contract)",
     features: [
       {
         category: "Design & Development",
         items: [
-          "Custom responsive design for mobile and desktop",
-          "Up to 5 unique page layouts",
-          "Basic SEO optimization",
-          "Contact form integration",
-          "Google Analytics setup"
+          "5-page custom-coded layout",
+          "Mobile-first, responsive design",
+          "Clean, modern user interface"
         ]
       },
       {
         category: "Content & Media",
         items: [
-          "Up to 10 pages of content",
-          "Basic image optimization",
-          "Integration of client-provided media",
-          "Database for CMS"
+          "You provide text & images; we format them professionally",
+          "Basic image optimization for performance"
         ]
       },
       {
         category: "Functionality",
         items: [
-          "Simple content management system (CMS)",
-          "Social media links",
-          "Email newsletter signup form"
+          "Contact form integration",
+          "Basic on-page SEO setup",
+          "Fast loading times and smooth navigation"
         ]
       },
       {
         category: "Support & Maintenance",
         items: [
-          "30 days of post-launch support",
-          "Basic website training session",
-          "Monthly backup service"
+          "Hosting included",
+          "Monthly maintenance & core updates",
+          "SSL certificate & security monitoring",
+          "Optional buyout: $1,200"
         ]
       }
     ]
   },
   {
-    name: "Monthly Subscription Plan",
-    description: "Starting at $150/month. Flexible billing options available. Total price will vary based on the scope of the project after initial consultation.",
-    price: "$150/month",
+    name: "Custom Site Build",
+    description: "For brands that want a unique, tailored site with advanced features and interactive design. Ideal for businesses ready to make a strong visual impact.",
+    price: "Starting at $1,500 (one-time payment or payment plan available)",
     features: [
       {
         category: "Design & Development",
         items: [
-          "Premium custom responsive design",
-          "Up to 10 unique page layouts",
-          "Advanced SEO optimization",
-          "Custom contact form",
-          "Google Analytics and Google Search Console setup"
+          "Fully custom design & user experience",
+          "Advanced layout with motion/interactivity",
+          "Tailored branding elements (fonts, colors, icons)"
         ]
       },
       {
         category: "Content & Media",
         items: [
-          "Up to 20 pages of content",
-          "Advanced image and video optimization",
-          "Custom icon design",
-          "Custom Graphic Design",
-          "Custom Illustrations",
-          "Database for CMS"
+          "Content guidance and layout support",
+          "Custom media galleries, testimonials, or team pages",
+          "Image compression & loading optimization"
         ]
       },
       {
         category: "Functionality",
         items: [
-          "Advanced content management system",
-          "Blog or news section with categories and tags",
-          "Social media feed integration",
-          "Basic e-commerce functionality (up to 20 products)"
+          "Interactive components (forms, sliders, tabs)",
+          "Third-party integrations (e.g., Google Maps, Calendars)",
+          "On-page SEO setup"
         ]
       },
       {
         category: "Support & Maintenance",
         items: [
-          "90 days of post-launch support minimum then continues through the duration of the contract",
-          "Comprehensive website training session",
-          "Monthly maintenance and security updates",
-          "Basic speed optimization"
+          "30 days of post-launch support included",
+          "Optional maintenance: $75/month",
+        ]
+      }
+    ]
+  },
+  {
+    name: "Full-Service Retainer",
+    description: "For businesses that want an expert in their corner long-term — whether for updates, upgrades, or new feature rollouts.",
+    price: "$250/mo (6-month minimum)",
+    features: [
+      {
+        category: "Design & Development",
+        items: [
+          "All features from the Custom Site Build",
+          "New pages or redesigns added over time",
+          "Refinements to layout and style as your brand evolves"
+        ]
+      },
+      {
+        category: "Content & Media",
+        items: [
+          "Monthly content updates (text, images, promotions)",
+          "Seasonal graphics or landing page creation",
+          "Media management and optimization"
+        ]
+      },
+      {
+        category: "Functionality",
+        items: [
+          "Feature rollouts (booking, e-commerce, etc.)",
+          "Priority bug fixes and enhancements",
+          "Third-party tool integration (email marketing, analytics)"
+        ]
+      },
+      {
+        category: "Support & Maintenance",
+        items: [
+          "Priority technical support",
+          "Ongoing performance monitoring",
+          "Hosting included",
+          "Optional buyout: $1,200"
         ]
       }
     ]
@@ -111,7 +140,7 @@ export default function PriceBreakdown() {
           </div>
           
           <div className="relative">
-            <div className="absolute -top-5 -left-5 bg-red-500 text-white p-2 z-10 rotate-6 border-2 border-black hidden md:block">
+            <div className="absolute -top-10 -left-5 bg-red-500 text-white p-2 z-10 rotate-6 border-2 border-black hidden md:block">
               <span className="price-tag font-bold">Pick your perfect plan!</span>
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center relative z-0">
