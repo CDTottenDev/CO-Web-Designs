@@ -6,11 +6,11 @@ import './components/retro-styles.css'; // Add a CSS file for retro styles
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Before & After Website Transformations | Central Oregon Web Designs',
+  title: 'Before & After Website Transformations | C.D. Totten - Web Developer',
   description: 'See real website transformations and performance improvements. We specialize in revamping websites for better speed, accessibility, and SEO.',
   keywords: ['website before after', 'website performance', 'website redesign', 'web optimization', 'lighthouse scores'],
   openGraph: {
-    title: 'Website Transformations | Central Oregon Web Designs',
+    title: 'Website Transformations | C.D. Totten - Web Developer',
     description: 'See our website redesign results with improved performance, accessibility, and SEO scores',
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Transformations | Central Oregon Web Designs',
+    title: 'Website Transformations | C.D. Totten - Web Developer',
     description: 'See our website redesign results with improved performance, accessibility, and SEO scores',
     images: ['/og-before-after.jpg'],
   },

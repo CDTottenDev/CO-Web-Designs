@@ -13,7 +13,7 @@ export default function BeforeAfterPage() {
               <span className="text-sm">Website Transformations</span>
             </div>
             <h1 className="text-4xl font-bold mb-4">
-              Central Oregon <span className="underline decoration-red-500">Web Designs</span>
+            C.D. Totten <span className="underline decoration-red-500">Web Developer</span>
             </h1>
             <p className="text-lg mb-8">
               Revamping Websites for Better Performance
@@ -84,7 +84,7 @@ export default function BeforeAfterPage() {
         <div className="container mx-auto px-4 mt-12 text-center">
           <div className="bg-white border-2 border-black retro-shadow p-6 mb-12 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 underline decoration-red-500">
-              Why Choose Central Oregon Web Designs?
+              Why Choose C.D. Totten - Web Services?
             </h3>
             <ul className="text-lg space-y-2">
               <li>• Expertise in modern web technologies</li>

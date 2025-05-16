@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Central Oregon Web Designs</h3>
+            <h3 className="text-xl font-bold mb-4">C.D. Totten - Web Developer</h3>
             <p className="mb-4">
-              Professional web design services nationwide. Founded in Oregon, now serving clients across the US from our Florida location.
+              Professional web design services nationwide. Serving clients across the US from our Florida location.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-gray-300">
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} Central Oregon Web Designs. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} C.D. Totten - Web Developer. All rights reserved.</p>
           <div className="mt-4 md:mt-0">
             <a href="/privacy-policy" className="text-sm mr-4 hover:text-gray-300">Privacy Policy</a>
             <a href="/terms" className="text-sm hover:text-gray-300">Terms of Service</a>

@@ -81,7 +81,7 @@ export default function Services() {
           Our Web Design <span className="underline decoration-red-500">Services</span>
         </h1>
         <p className="text-lg mb-8">
-          At Central Oregon Web Designs, we're all about making websites that work as hard as you do.
+          At C.D. Totten - Web Developer, we're all about making websites that work as hard as you do.
         </p>
       </header>
       
@@ -103,7 +103,7 @@ export default function Services() {
             <span className="price-tag font-bold">Why us?</span>
           </div>
           <div className="bg-white border-2 border-black retro-shadow p-8 relative z-0">
-            <h2 className="text-3xl font-bold mb-4">Why Choose <span className="underline decoration-red-500">Central Oregon</span> Web Designs?</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Choose <span className="underline decoration-red-500">C.D. Totten - Web Developer</span>?</h2>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <div className="bg-black text-white w-5 h-5 flex items-center justify-center mr-3 mt-1 font-bold border-2 border-black flex-shrink-0">
@@ -150,7 +150,7 @@ export default function Services() {
       </main>
       
       <footer className="mt-16 text-center border-t-2 border-black pt-8">
-        <p>© 2025 Central Oregon Web Designs. All rights reserved.</p>
+        <p>© 2025 C.D. Totten - Web Developer. All rights reserved.</p>
       </footer>
       <FloatingNav />
     </div>

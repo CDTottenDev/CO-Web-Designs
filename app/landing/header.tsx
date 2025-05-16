@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {
@@ -9,8 +10,7 @@ const Header: React.FC = () => {
     <header className="bg-white border-b-2 border-black sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold mr-2">CO<span className="text-red-500">WD</span></h1>
-          <div className="hidden md:block text-xs">Central Oregon Web Designs</div>
+          <Link href="/" className="text-2xl font-bold mr-2 text-red-600">C.D. Totten - Web Developer</Link>
         </div>
         
         {/* Mobile menu button */}

@@ -9,15 +9,15 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.centralorgeonwebdesigns.com"),
   title: {
-    default: "Central Oregon Web Designs | Professional Web Development",
-    template: "%s | Central Oregon Web Designs",
+    default: "C.D. Totten - Web Developer | Professional Web Development",
+    template: "%s | C.D. Totten - Web Developer",
   },
   description:
-    "Expert web design and development services in Central Oregon. We create beautiful, responsive, and SEO-friendly websites tailored to your business needs.",
-  keywords: ["web design", "web development", "Central Oregon", "responsive design", "SEO"],
-  authors: [{ name: "Central Oregon Web Designs" }],
-  creator: "Central Oregon Web Designs",
-  publisher: "Central Oregon Web Designs",
+    "Expert web design and development services in Central Florida. We create beautiful, responsive, and SEO-friendly websites tailored to your business needs.",
+  keywords: ["web design", "web development", "Central Florida", "responsive design", "SEO"],
+  authors: [{ name: "C.D. Totten - Web Developer" }],
+  creator: "C.D. Totten - Web Developer",
+  publisher: "C.D. Totten - Web Developer",
   formatDetection: {
     email: false,
     address: false,
@@ -27,20 +27,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.centralorgeonwebdesigns.com",
-    siteName: "Central Oregon Web Designs",
+    siteName: "C.D. Totten - Web Developer",
     images: [
       {
         url: "https://www.centralorgeonwebdesigns.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Central Oregon Web Designs",
+        alt: "C.D. Totten - Web Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@CentralORWebDesigns",
-    creator: "@CentralORWebDesigns",
+    site: "@CDTotten",
+    creator: "@CDTotten",
   },
   viewport: {
     width: "device-width",
@@ -71,13 +71,13 @@ export default function HowWeWorkLayout({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Central Oregon Web Designs",
+          name: "C.D. Totten - Web Developer",
           url: "https://www.centralorgeonwebdesigns.com",
           logo: "https://www.centralorgeonwebdesigns.com/logo.png",
           sameAs: [
-            "https://www.facebook.com/CentralOregonWebDesigns",
-            "https://twitter.com/CentralORWebDesigns",
-            "https://www.linkedin.com/company/central-oregon-web-designs",
+            "https://www.facebook.com/C.D. Totten - Web Developer",
+            "https://twitter.com/CDTotten",
+            "https://www.linkedin.com/company/cd-totten",
           ],
           contactPoint: {
             "@type": "ContactPoint",

@@ -175,7 +175,7 @@ const WebDesignContent: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-4xl font-bold text-foreground/80 dark:text-white/80 mb-6">Ready to Elevate Your Online Presence?</h2>
-        <p className="text-xl text-foreground/80 dark:text-white/80 mb-8">Let Central Oregon Web Design transform your digital footprint</p>
+        <p className="text-xl text-foreground/80 dark:text-white/80 mb-8">Let C.D. Totten transform your digital footprint</p>
         <button className="text-white bg-zinc-900/90 dark:text-text px-8 py-4 rounded-full text-xl font-bold hover:bg-zinc-900/95 transition flex items-center mx-auto"
         onClick={() => {
           window.location.href = "/contact";
@@ -186,8 +186,8 @@ const WebDesignContent: React.FC = () => {
       </motion.section>
 
       <footer className="text-center text-foreground/80 dark:text-white/80">
-        <p>© 2025 Central Oregon Web Design. Crafting digital experiences that matter.</p>
-        <p className="mt-2">Serving local businesses in Bend, Redmond, Sisters, and beyond.</p>
+        <p>© 2025 C.D. Totten - Web Developer. Crafting digital experiences that matter.</p>
+        <p className="mt-2">Serving local businesses in Central Florida, United States.</p>
       </footer>
     </div>
   )

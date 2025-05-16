@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { ThemeSwitch } from './ui/themeswitch'
 
 export function Header() {

@@ -54,7 +54,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: "Do you work with clients outside of Florida?",
-      answer: "Yes! While our company started in Oregon and we're now based in Florida, we work with clients nationwide and internationally. All our services can be delivered remotely, and we use video calls and online collaboration tools to ensure a smooth process."
+      answer: "Yes! We work with clients nationwide and internationally. All our services can be delivered remotely, and we use video calls and online collaboration tools to ensure a smooth process."
     },
     {
       question: "What if I'm not satisfied with the design?",

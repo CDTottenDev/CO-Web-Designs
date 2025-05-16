@@ -24,7 +24,7 @@ const TestimonialCard: React.FC<Testimonial> = ({ quote, author }) => (
 const TestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      quote: "Central Oregon Web Designs transformed our online presence. Sales increased 40% within the first three months of launching our new site!",
+      quote: "C.D. Totten transformed our online presence. Sales increased 40% within the first three months of launching our new site!",
       author: "Sarah Johnson",
     },
     {

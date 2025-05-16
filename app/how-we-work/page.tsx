@@ -10,10 +10,10 @@ import FloatingNav from '../components/FloatingNav'
 
 export const metadata: Metadata = {
   ...uniqueApproachMetadata,
-  title: 'Our Web Design Process | Central Oregon Web Designs',
+  title: 'Our Web Design Process | C.D. Totten - Web Developer',
   description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
   openGraph: {
-    title: 'Our Web Design Process | Central Oregon Web Designs',
+    title: 'Our Web Design Process | C.D. Totten - Web Developer',
     description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
     type: 'website',
     url: 'https://centralorgeonwebdesigns.com/process',
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: 'https://centralorgeonwebdesigns.com/images/process-timeline.jpg',
         width: 1200,
         height: 630,
-        alt: 'Central Oregon Web Designs Process Timeline',
+        alt: 'C.D. Totten - Web Developer Process Timeline',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our Web Design Process | Central Oregon Web Designs',
+    title: 'Our Web Design Process | C.D. Totten - Web Developer',
     description: 'Discover our transparent, client-focused web design process. From initial consultation to launch, see how we bring your vision to life.',
     images: ['https://centralorgeonwebdesigns.com/images/process-timeline.jpg'],
   },

@@ -7,7 +7,7 @@ const UniqueApproachSection: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8 text-blue-800 dark:text-blue-300">Why Choose Central Oregon Web Designs?</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 text-blue-800 dark:text-blue-300">Why Choose C.D. Totten - Web Developer?</h2>
         <p className="text-xl text-center mb-12 text-gray-700 dark:text-gray-300">
           With over 25 years of blue-collar experience and 15 years in computer engineering and software development, we
           bring a unique perspective to web design that sets us apart.

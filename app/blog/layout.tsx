@@ -73,7 +73,7 @@ const jsonLd = {
   url: "https://centraloregonwebdesigns.com",
   publisher: {
     "@type": "Organization",
-    name: "Central Oregon Web Designs",
+    name: "C.D. Totten - Web Developer",
     logo: {
       "@type": "ImageObject",
       url: "https://centraloregonwebdesigns.com/logo.png",

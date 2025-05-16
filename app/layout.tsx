@@ -9,8 +9,8 @@ import { NavigationEvents } from './components/NavigationEvents'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Central Oregon Web Designs',
-  description: 'Central Oregon Web Designs is a web design and development company that specializes in creating beautiful, responsive websites for small-to-medium businesses.',
+  title: 'C.D. Totten - Web Developer',
+  description: 'C.D. Totten is a web developer and designer who specializes in creating beautiful, responsive websites for small-to-medium businesses.',
 }
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Central Oregon Web Designs",
+              "name": "C.D. Totten",
               // Add other schema properties as needed
             })
           }}

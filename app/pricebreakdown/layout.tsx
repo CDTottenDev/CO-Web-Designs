@@ -2,9 +2,9 @@ import '@/app/globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Central Oregon Web Designs - Pricing & Features',
+  title: 'C.D. Totten - Web Developer - Pricing & Features',
   description: 'Explore our flexible pricing plans and customizable features for your web design project.',
-  keywords: 'web design, pricing plans, custom features, Central Oregon',
+  keywords: 'web design, pricing plans, custom features, Central Florida, United States',
 }
 
 export default function PriceBreakdownLayout({
