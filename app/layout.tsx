@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/cdt-logo.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
