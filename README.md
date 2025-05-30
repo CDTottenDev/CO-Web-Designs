@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# COWD Web Designs - Modern Web Development Portfolio
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+
+## Overview
+
+This is a modern, full-stack web development portfolio and business website built with Next.js 15, TypeScript, and Tailwind CSS. The project showcases professional web design services, portfolio work, and provides valuable resources for clients and visitors.
+
+## Features
+
+- 🎨 Modern, responsive design with Tailwind CSS
+- ⚡ Server-side rendering and static site generation with Next.js
+- 🔒 Type-safe development with TypeScript
+- 📊 Database integration with Prisma
+- 🎭 Beautiful animations with Framer Motion
+- 🌙 Dark/Light mode support
+- 📱 Mobile-first approach
+- 🔍 SEO optimized with schema.org integration
+- 📊 Analytics and performance monitoring with Vercel
+- 📝 Blog system with MDX support
+- 🎯 Interactive components with Radix UI
+- 📈 Data visualization with Recharts
+
+## Tech Stack
+
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** Prisma ORM
+- **UI Components:** Radix UI
+- **Animations:** Framer Motion
+- **Analytics:** Vercel Analytics & Speed Insights
+- **Content:** MDX with gray-matter
+- **Validation:** Zod
+- **Icons:** Lucide React, Heroicons
+- **Charts:** Recharts
+
+## Project Structure
+
+```
+├── app/                    # Next.js 13+ app directory
+│   ├── api/               # API routes
+│   ├── blog/              # Blog section
+│   ├── components/        # Shared components
+│   ├── services/          # Services pages
+│   ├── web-design/        # Web design portfolio
+│   └── ...                # Other feature directories
+├── components/            # Global components
+├── lib/                   # Utility functions and configurations
+├── prisma/               # Database schema and migrations
+├── public/               # Static assets
+└── styles/               # Global styles
+```
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/cdtottendev/CO-Web-Designs.git
+cd CO-Web-Designs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+- GitHub: [@cdtottendev](https://github.com/cdtottendev)
+- Website: [COWD Web Designs](https://cowdwebdesigns.com)
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Vercel](https://vercel.com)
+- [Prisma](https://prisma.io)
+- [Radix UI](https://www.radix-ui.com)
